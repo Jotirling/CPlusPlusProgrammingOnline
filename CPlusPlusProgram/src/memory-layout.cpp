@@ -8,12 +8,12 @@
 // Memory Layout in C/C++
 /*
 
- High Addresses ---> .----------------------.
+ High Addresses --->                     .----------------------.
 					 |      Environment     |
 					 |----------------------|
 					 |                      |   Functions and variable are declared
 					 |         STACK        |   on the stack.
- base pointer ->     | - - - - - - - - - - -|
+ base pointer ->                         | - - - - - - - - - - -|
 					 |           |          |
 					 |           v          |
 					 :                      :
@@ -25,7 +25,7 @@
 					 :                      :    allocate)
 					 |           ^          |
 					 |           |          |
- brk point ->        ' - - - - - - - - - - -'   Dynamic memory is declared on the heap
+ brk point ->                            ' - - - - - - - - - - -'   Dynamic memory is declared on the heap
 					 |          HEAP        |
 					 |                      |
 					 |----------------------|
@@ -34,7 +34,8 @@
 					 |          Ds          |   Initialized data (DS)
 					 |----------------------|
 					 |          Text        |   Binary code
- Low Addresses ----> '----------------------'
+ Low Addresses ---->                     '----------------------'
+ 
  */
 
 //	Stack:
@@ -76,3 +77,5 @@
 //		It contains all uninitialized global and static variables.
 //		All variables in this segment initialized by the zero(0) and pointer with the null pointer.
 //		The program loader allocates memory for the BSS section when it loads the program.
+//
+//
