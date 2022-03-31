@@ -2,7 +2,7 @@
  * virtual-function.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //	 TOPIC: Introduction To Virtual Function
@@ -31,7 +31,7 @@
 //			1.	A virtual function is a member function which is declared within a base class and
 //				is re-defined (overridden) by a derived class.
 //			2. 	When you refer to a derived class object using a pointer or a reference to the base class,
-//				you can call a virtual function for that object and execute the derived class’s version of the function.
+//				you can call a virtual function for that object and execute the derived classï¿½s version of the function.
 //
 //			3. 	Virtual functions ensure that the correct function is called for an object, regardless of the type
 //				of reference (or pointer) used for function call.

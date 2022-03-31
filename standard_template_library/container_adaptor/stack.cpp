@@ -2,7 +2,7 @@
  * stack.cpp
  *
  *  Created on: 16-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 //   *** stack ***
 //		1. Stacks are a type of container adaptors with LIFO(Last In First Out) type of working,
@@ -20,8 +20,8 @@
 //		3  There is an element called as 'top' which is the element at the upper most position.
 //		4. All the insertion and deletion operations are made at the top element itself in the stack.
 //
-//		Type – is the Type of element contained in the stack. It can be any valid C++ type or even a user-defined type.
-//		Container – is the Type of underlying container object.
+//		Type ï¿½ is the Type of element contained in the stack. It can be any valid C++ type or even a user-defined type.
+//		Container ï¿½ is the Type of underlying container object.
 //
 //		Member Types:-
 //			value_type- The first template parameter, T. It denotes the element types.
@@ -29,11 +29,11 @@
 //			size_type- Unsigned integral type.
 //
 //		The functions associated with stack are:
-//			empty() – Returns whether the stack is empty – Time Complexity : O(1)
-//			size() – Returns the size of the stack – Time Complexity : O(1)
-//			top() – Returns a reference to the top most element of the stack – Time Complexity : O(1)
-//			push(g) – Adds the element ‘g’ at the top of the stack – Time Complexity : O(1)
-//			pop() – Deletes the top most element of the stack – Time Complexity : O(1)
+//			empty() ï¿½ Returns whether the stack is empty ï¿½ Time Complexity : O(1)
+//			size() ï¿½ Returns the size of the stack ï¿½ Time Complexity : O(1)
+//			top() ï¿½ Returns a reference to the top most element of the stack ï¿½ Time Complexity : O(1)
+//			push(g) ï¿½ Adds the element ï¿½gï¿½ at the top of the stack ï¿½ Time Complexity : O(1)
+//			pop() ï¿½ Deletes the top most element of the stack ï¿½ Time Complexity : O(1)
 //
 //		Functions :
 //			1. (constructor) The function is used for the construction of a stack container.

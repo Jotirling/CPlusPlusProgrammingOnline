@@ -2,7 +2,7 @@
  * uniqe_ptr.cpp
  *
  *  Created on: 11-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //		*** unique_ptr ***

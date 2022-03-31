@@ -2,7 +2,7 @@
  * advantage-of-vector-over-array.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //	Advantages of Vector over arrays :

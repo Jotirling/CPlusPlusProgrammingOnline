@@ -2,7 +2,7 @@
  * future-promise.cpp
  *
  *  Created on: 15-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 // TOPIC: std::future and std::promise in threading.

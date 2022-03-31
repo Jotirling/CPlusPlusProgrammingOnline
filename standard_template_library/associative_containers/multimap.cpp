@@ -2,7 +2,7 @@
  * multimap.cpp
  *
  *  Created on: 14-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //	Multimaps are part of the C++ STL (Standard Template Library).

@@ -2,7 +2,7 @@
  * static-object-static-function.cpp
  *
  *  Created on: 14-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 // 	static member function
 //	1. static member functions do not have this pointer.

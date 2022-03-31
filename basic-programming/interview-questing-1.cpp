@@ -2,7 +2,7 @@
  * interview-questing-1.cpp
  *
  *  Created on: 18-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //  1. Find out correct bracket closing loop from given example.
@@ -68,7 +68,7 @@ using namespace std;
 int main() {
 	char charVar = '&';
 	cout << (int) charVar << endl;
-	char S[] = "JotiPriya";
+	char S[] = "Jotirling Swamiriya";
 	int len = strlen(S);
 	for (int i = 0; i < len / 2; ++i)
 		std::swap(S[i], S[len - i - 1]);

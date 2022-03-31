@@ -2,7 +2,7 @@
  * conditional-variable-producer-consumer.cpp
  *
  *  Created on: 15-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 // TOPIC: Producer/Consumer OR Bounded Buffer Problem In C++11 Threading

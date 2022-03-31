@@ -2,7 +2,7 @@
  * difference-pointer-reference.cpp
  *
  *  Created on: 19-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 // 1. Memory Address

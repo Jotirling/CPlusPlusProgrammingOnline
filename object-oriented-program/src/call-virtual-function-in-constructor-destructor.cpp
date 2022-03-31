@@ -2,7 +2,7 @@
  * call-virtual-function-in-constructor-destructor.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //  *** Calling virtual methods in constructor/destructor  ***

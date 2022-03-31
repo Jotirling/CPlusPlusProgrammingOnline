@@ -2,7 +2,7 @@
  * final-keyword.cpp
  *
  *  Created on: 15-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 // 		*** final keyword in C++ ***
@@ -16,7 +16,7 @@
 //		2. define class as final
 
 // 1. define function as final
-//		a. Sometimes you don’t want to allow derived class to override the base class’ virtual function.
+//		a. Sometimes you donï¿½t want to allow derived class to override the base classï¿½ virtual function.
 //		b. C++ 11 allows built-in facility to prevent overriding of virtual function using final specifier.
 
 

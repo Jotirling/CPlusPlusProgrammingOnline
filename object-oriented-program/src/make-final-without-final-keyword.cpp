@@ -2,7 +2,7 @@
  * make-final-without-final-keyword.cpp
  *
  *  Created on: 15-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //	How To Make A Class Non Inheritable Without Using final Keyword In C++
@@ -12,7 +12,7 @@
 //
 //	SOLUTION:
 //		a. Make default constructor of Final class as private.
-//		b. Inherite Final class as virtual in our class which we want to make non—inheritable.
+//		b. Inherite Final class as virtual in our class which we want to make nonï¿½inheritable.
 //		c. Make our class as friend inside Final class.
 //			(so that only our class can call the constructor of Final class, not the derived class)
 //	Point a - 	By making the Final class constructor private we will avoid

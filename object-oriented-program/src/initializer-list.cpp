@@ -2,7 +2,7 @@
  * initializer-list.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 // 	What is Initializer List in C++

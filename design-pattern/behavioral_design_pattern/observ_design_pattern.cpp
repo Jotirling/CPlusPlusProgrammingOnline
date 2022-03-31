@@ -2,7 +2,7 @@
  * observ_design_pattern.cpp
  *
  *  Created on: 11-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 // *** Behavioral ***

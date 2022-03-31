@@ -2,7 +2,7 @@
  * private-constructor.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //  *** Can a constructor be private in C++ ? ***
@@ -59,7 +59,7 @@ int main(){
 //		3. Named Constructor Idiom :
 //				Since constructor has same name as of class, different constructors are differentiated by their parameter list,
 //					but if numbers of constructors is more, then implementation can become error prone.
-//				With the Named Constructor Idiom, you declare all the class’s constructors in the private or protected sections,
+//				With the Named Constructor Idiom, you declare all the classï¿½s constructors in the private or protected sections,
 //				and then for accessing objects of class, you create public static functions.
 
 // ambiguous nature of constructor with same no of parameters of same type
@@ -77,7 +77,7 @@ class Base
 	// Polar coordinates (radius and angle)
 	Base(int r, int a);
 
-	// error: ‘Base::Base(int, int)’ cannot
+	// error: ï¿½Base::Base(int, int)ï¿½ cannot
 	// be overloaded
 };
 int main()

@@ -2,7 +2,7 @@
  * virtual-keyword.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 // 	*** virtual keyword ***
 //	Definitions :
@@ -20,7 +20,7 @@
 //
 //	Example:
 //		Consider the following simple program as an example of runtime polymorphism.
-//		The main thing to note about the program is that the derived class’s function is called using a base class pointer.
+//		The main thing to note about the program is that the derived classï¿½s function is called using a base class pointer.
 //		The idea is that virtual functions are called according to the type of the object instance pointed to or referenced,
 //			not according to the type of the pointer or reference.
 //		In other words, virtual functions are resolved late, at runtime.

@@ -2,7 +2,7 @@
  * copy-constructor.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 #include <iostream>

@@ -2,7 +2,7 @@
  * global-static-local-extern.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //	Local Variables
@@ -49,6 +49,8 @@
 //		To create a constant variable in C++, precede the variable declaration with the keyword const.
 //		This tells the compiler that "a variable has been created that has a value that cannot be changed"
 //		When creating a constant variable, it MUST be assigned a value.
+
+
 #include <iostream>
 
 #ifndef NULL
@@ -60,13 +62,17 @@ int main(void) {
 	return 0;
 }
 #endif
+
+
+
+
 //	*** Static Variable : ***
 
 //	1. A static int variable remains in memory while the program is running.
 //		A normal or auto variable is destroyed when a function call where the variable was declared is over.
 //
 //	For example, we can use static int to count a number of times a function is called,
-//		but an auto variable can’t be used for this purpose.
+//		but an auto variable canï¿½t be used for this purpose.
 
 #include<iostream>
 #ifndef NULL

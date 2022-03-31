@@ -2,7 +2,7 @@
  * shared_ptr_type_casting.cpp
  *
  *  Created on: 11-Mar-2022
- *      Author: jotipriya
+ *      Author: Jotirling Swamiriya
  */
 
 #include <iostream>

@@ -2,12 +2,13 @@
  * memory-layout.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 // Memory Layout in C/C++
 /*
-					 High Addresses ---> .----------------------.
+
+ High Addresses ---> .----------------------.
 					 |      Environment     |
 					 |----------------------|
 					 |                      |   Functions and variable are declared

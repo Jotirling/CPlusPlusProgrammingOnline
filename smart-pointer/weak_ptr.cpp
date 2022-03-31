@@ -2,7 +2,7 @@
  * weak_ptr.cpp
  *
  *  Created on: 16-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 // NOTES:

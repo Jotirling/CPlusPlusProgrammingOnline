@@ -1,11 +1,9 @@
-/*
-
 //============================================================================
 // Name        : CPlusPlusProgram.cpp
 // Author      : Jotirling Swami
 // Version     :
 // Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Description : 
 //============================================================================
 
 //	1. Pointers to constant:	const int* score =  &high;

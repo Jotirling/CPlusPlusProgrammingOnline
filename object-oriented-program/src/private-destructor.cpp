@@ -2,7 +2,7 @@
  * private-destructor.cpp
  *
  *  Created on: 17-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //   *** Private Destructor in C++ ***
@@ -33,7 +33,7 @@ int main() {
 #endif
 
 // 		2. What do you say about the below program?
-//			The program fails in the compilation. The compiler notices that the local variable ‘t’ cannot be destructed
+//			The program fails in the compilation. The compiler notices that the local variable ï¿½tï¿½ cannot be destructed
 //				because the destructor is private.
 
 #include <iostream>
@@ -51,7 +51,7 @@ int main() {
 }
 #endif
 
-// 		3.There is no object being constructed, the program just creates a pointer of type “Test *”, so nothing is destructed.
+// 		3.There is no object being constructed, the program just creates a pointer of type ï¿½Test *ï¿½, so nothing is destructed.
 
 #include <iostream>
 using namespace std;
@@ -69,7 +69,7 @@ int main() {
 }
 #endif
 
-//		4. The program also works fine. When something is created using dynamic memory allocation, it is the programmer’s responsibility to delete it. So compiler doesn’t bother.
+//		4. The program also works fine. When something is created using dynamic memory allocation, it is the programmerï¿½s responsibility to delete it. So compiler doesnï¿½t bother.
 
 #include <iostream>
 using namespace std;

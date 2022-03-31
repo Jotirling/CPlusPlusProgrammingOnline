@@ -2,7 +2,7 @@
  * mutex-semaphorse.cpp
  *
  *  Created on: 20-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //   *** Mutex and Semaphorse ***

@@ -2,7 +2,7 @@
  * priority_queue.cpp
  *
  *  Created on: 10-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 #include <iostream>
@@ -274,7 +274,7 @@ int main() {
 			it != studentData.end(); ++it)
 		pqLessStudent.push(*it);
 
-	pqLessStudent.emplace(5, 100, "Jotipriya", "Swami");
+	pqLessStudent.emplace(5, 100, "Jotirling Swamiriya", "Swami");
 
 	cout << "After adding into priority_queue pqLessStudent:" << endl;
 	while (!pqLessStudent.empty()) {
@@ -284,7 +284,7 @@ int main() {
 //		rollNumber:1 Marks:80 Name:Suresh Surname:patil
 //		rollNumber:2 Marks:90 Name:Mahesh Surname:Jadhav
 //		rollNumber:4 Marks:90 Name:Ganesh Surname:Swami
-//		rollNumber:5 Marks:100 Name:Jotipriya Surname:Swami
+//		rollNumber:5 Marks:100 Name:Jotirling Swamiriya Surname:Swami
 		pqLessStudent.pop();
 	}
 
@@ -305,13 +305,13 @@ int main() {
 			it != studentData.end(); ++it)
 		pqGreaterStudent.push(*it);
 
-	pqGreaterStudent.emplace(5, 100, "Jotipriya", "Swami");
+	pqGreaterStudent.emplace(5, 100, "Jotirling Swamiriya", "Swami");
 
 	cout << "After adding into priority_queue pqGreaterStudent:" << endl;
 	while (!pqGreaterStudent.empty()) {
 		Student s1 = pqGreaterStudent.top();
 		s1.display();
-//		rollNumber:5 Marks:100 Name:Jotipriya Surname:Swami
+//		rollNumber:5 Marks:100 Name:Jotirling Swamiriya Surname:Swami
 //		rollNumber:2 Marks:90 Name:Mahesh Surname:Jadhav
 //		rollNumber:4 Marks:90 Name:Ganesh Surname:Swami
 //		rollNumber:1 Marks:80 Name:Suresh Surname:patil

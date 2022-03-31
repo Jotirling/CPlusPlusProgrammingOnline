@@ -2,7 +2,7 @@
  * const-data-member.cpp
  *
  *  Created on: 14-Mar-2022
- *      Author: jotip
+ *      Author: Jotirling Swami
  */
 
 //	constant data member of the class :
