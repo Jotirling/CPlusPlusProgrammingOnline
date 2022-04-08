@@ -22,7 +22,7 @@
 //		 	 	 data_type *var_name = reinterpret_cast <data_type *>(pointer_variable);
 //
 //		6. Return Type
-//		 	 It doesn’t have any return type. It simply converts the pointer type.
+//		 	 It doesnt have any return type. It simply converts the pointer type.
 //
 //		7. Parameters
 //			It takes only one parameter i.e., the source pointer variable (p in above example).

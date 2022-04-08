@@ -11,7 +11,7 @@
 //		Following are some interesting facts about const_cast.
 //
 //		(a) const_cast can be used to change non-const class members inside a const member function.
-//		(b) const_cast can be used to pass const data to a function that doesn’t receive const.
+//		(b) const_cast can be used to pass const data to a function that doesnt receive const.
 //		(c) It is undefined behavior to modify a value which is initially declared as const.
 //		 Notes:
 //
@@ -62,7 +62,7 @@ int main(void) {
 	cout << "New roll number: " << s.getRoll() << endl;
 	//-----------------------------------------------------------------------
 
-//	(b) const_cast can be used to pass const data to a function that doesn’t receive const.
+//	(b) const_cast can be used to pass const data to a function that doesnt receive const.
 
 	const int val = 10;
 	const int *ptr = &val;

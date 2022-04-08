@@ -20,10 +20,11 @@
 //		An object referenced by the contained raw pointer will not be destroyed until reference count is greater than zero i.e.
 //		until all copies of shared_ptr have been deleted.
 //		So, we should use shared_ptr when we want to assign one raw pointer to multiple owners.
+//
 //	When to use shared_ptr?
 //		Use shared_ptr if you want to share ownership of a resource.
 //		Many shared_ptr can point to a single resource. shared_ptr maintains reference count for this propose.
-//		when all shared_ptr�s pointing to resource goes out of scope the resource is destroyed.
+//		when all shared_ptr pointing to resource goes out of scope the resource is destroyed.
 //	Notes:
 //		 0. shared_ptr is a smart pointer which can share the ownership of object (managed object).
 //		 1. Several shared_ptr can point to the same object (managed object).
@@ -45,6 +46,7 @@
 //		3. get() : Returns the stored pointer.
 //		4. use_cout() : Returns the number of different shared_ptr instances\
 //		5. unique() : Checks if the only shared_ptr instance managing the current object, i.e. whether use_count() == 1.
+//
 #include <memory>
 #include <iostream>
 using namespace std;
