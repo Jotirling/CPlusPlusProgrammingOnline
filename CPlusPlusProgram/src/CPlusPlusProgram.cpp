@@ -3,7 +3,7 @@
 // Author      : Jotirling Swami
 // Version     :
 // Copyright   : Your copyright notice
-// Description : 
+// Description :
 //============================================================================
 
 //	1. Pointers to constant:	const int* score =  &high;
@@ -27,7 +27,8 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
 
 	int val = 10;
 	int val1 = 20;
@@ -35,29 +36,25 @@ int main() {
 	value = 100;
 	cout << value << endl;
 
+	const int ivalue = val;
+	ivalue = val1; // error: assignment of read-only variable 'ivalue'
+	ivalue = 10;   // error: assignment of read-only variable 'ivalue'
 
-	 const int ivalue = val;
-	 ivalue = val1; 	//error: assignment of read-only variable 'ivalue'
-	 ivalue = 10; 	//error: assignment of read-only variable 'ivalue'
+	int const ivalue1 = val;
+	ivalue1 = val1; // error: assignment of read-only variable 'ivalue1'
+	ivalue1 = 10;	// error: assignment of read-only variable 'ivalue1'
 
-	 int const ivalue1 = val;
-	 ivalue1 = val1; 	//error: assignment of read-only variable 'ivalue1'
-	 ivalue1 = 10; 		//error: assignment of read-only variable 'ivalue1'
+	const int *ptr1 = &val;
+	ptr1 = &val1;
+	*ptr1 = 100; // error: assignment of read-only location '* ptr1'
 
-	 const int *ptr1 = &val;
-	 ptr1 = &val1;
-	 *ptr1 = 100; 		//error: assignment of read-only location '* ptr1'
+	int *const ptr2 = &val;
+	ptr2 = &val1; // error: assignment of read-only variable 'ptr2'
+	*ptr2 = 100;
 
-	 int *const ptr2 = &val;
-	 ptr2 = &val1;		//error: assignment of read-only variable 'ptr2'
-	 *ptr2 = 100;
-
-	 const int *const ptr3 = &val;
-	 ptr3 = &val1;		//error: assignment of read-only variable 'ptr3'
-	 *ptr3 = 100;   		//error: assignment of read-only location '*(const int*)ptr3'
-
+	const int *const ptr3 = &val;
+	ptr3 = &val1; // error: assignment of read-only variable 'ptr3'
+	*ptr3 = 100;  // error: assignment of read-only location '*(const int*)ptr3'
 
 	return 0;
 }
-
-*/

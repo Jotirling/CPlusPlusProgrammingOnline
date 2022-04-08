@@ -8,8 +8,9 @@
 //	*** Map Member Functions ***
 //
 //		1. Maps are part of the C++ STL (Standard Template Library).
-//		2. Maps are the associative containers that store sorted key-value pair, in which each key is unique and
-//		3. it can be inserted or deleted but cannot be altered.
+//		2. Maps are the associative containers that store sorted key-value pair,
+// 			in which each key is unique and
+//		3. It can be inserted or deleted but cannot be altered.
 //		4. Values associated with keys can be changed.
 //
 //		For example:
@@ -56,7 +57,7 @@
 //
 //	Element Access
 //		operator[]	Retrieve the element with given key.
-//		at	Retrieve the element with given key.
+//		at			Retrieve the element with given key.
 //
 //	Modifiers
 //		insert	Insert element in the map.
@@ -96,32 +97,38 @@
 #include <map>
 using namespace std;
 
-class Student {
+class Student
+{
 public:
 	int rollNumber;
 	int marks;
-	Student(int r, int m) :
-			rollNumber { r }, marks { m } {
+	Student(int r, int m) : rollNumber{r}, marks{m}
+	{
 	}
 
-	void display() const {
+	void display() const
+	{
 		cout << "rollNumber: " << rollNumber << ", marks: " << marks << endl;
 	}
 
-	bool operator <(const Student &obj) const {
+	bool operator<(const Student &obj) const
+	{
 		if (this->marks < obj.marks)
 			return true;
-		else if (this->marks == obj.marks) {
+		else if (this->marks == obj.marks)
+		{
 			if (this->rollNumber < obj.rollNumber)
 				return true;
 		}
 		return false;
 	}
 
-	bool operator >(const Student &obj) const {
+	bool operator>(const Student &obj) const
+	{
 		if (this->marks > obj.marks)
 			return true;
-		else if (this->marks == obj.marks) {
+		else if (this->marks == obj.marks)
+		{
 			if (this->rollNumber > obj.rollNumber)
 				return true;
 		}
@@ -129,18 +136,21 @@ public:
 	}
 };
 
-void printMap(map<int, string> &Map) {
-	//map.empty()
-	if (!Map.empty()) {
+void printMap(map<int, string> &Map)
+{
+	// map.empty()
+	if (!Map.empty())
+	{
 		for (map<int, string>::iterator it = Map.begin(); it != Map.end(); ++it)
 			cout << " key: " << it->first << " " << it->second << endl;
 	}
 	cout << endl;
 }
-int main() {
+
+int main()
+{
 	//-----------------------------------------------------------------------
-	map<int, string> Map { { 1, "one" }, { 2, "two" }, { 3, "three" }, { 4,
-			"four" }, { 5, "five" } };
+	map<int, string> Map{{1, "one"}, {2, "two"}, {3, "three"}, {4, "four"}, {5, "five"}};
 	printMap(Map);
 
 	map<int, string> Map1(Map.begin(), Map.end());
@@ -195,31 +205,34 @@ int main() {
 	cout << "print Map" << endl;
 	printMap(Map);
 	//-----------------------------------------------------------------------
-	map<int, string, greater<>> Mapp { { 1, "aa" }, { 2, "bb" }, { 3, "cc" }, {
-			4, "dd" }, { 5, "ff" } };
+	map<int, string, greater<>> Mapp{{1, "aa"}, {2, "bb"}, {3, "cc"}, {4, "dd"}, {5, "ff"}};
 	for (map<int, string>::iterator it = Mapp.begin(); it != Mapp.end(); ++it)
 		cout << " key: " << it->first << " " << it->second << endl;
 	cout << endl;
 	//-----------------------------------------------------------------------
 
-	map<int, char> map4 { { 1, 'A' }, { 2, 'B' }, { 3, 'C' }, { 4, 'D' } };
-	map<int, char> map8 { { 5, 'E' }, { 6, 'F' }, { 7, 'G' }, { 8, 'H' } };
+	map<int, char> map4{{1, 'A'}, {2, 'B'}, {3, 'C'}, {4, 'D'}};
+	map<int, char> map8{{5, 'E'}, {6, 'F'}, {7, 'G'}, {8, 'H'}};
 
-	for (auto &a : map4) {
+	for (auto &a : map4)
+	{
 		cout << a.first << " - " << a.second << " ";
 	}
 	cout << endl;
-	for (auto &a : map8) {
+	for (auto &a : map8)
+	{
 		cout << a.first << " - " << a.second << " ";
 	}
 	cout << endl;
 	map4.swap(map8); // map swap
 	cout << endl;
-	for (auto &a : map4) {
+	for (auto &a : map4)
+	{
 		cout << a.first << " - " << a.second << " ";
 	}
 	cout << endl;
-	for (auto &a : map8) {
+	for (auto &a : map8)
+	{
 		cout << a.first << " - " << a.second << " ";
 	}
 	cout << endl;
@@ -229,7 +242,7 @@ int main() {
 	Student s2(2, 90);
 	Student s3(3, 70);
 
-	map<int, Student, less<>> studentMap { { 1, s1 }, { 2, s2 }, { 3, s3 } };
+	map<int, Student, less<>> studentMap{{1, s1}, {2, s2}, {3, s3}};
 
 	Student s4(4, 100);
 	studentMap.insert(pair<int, Student>(4, s3));
@@ -239,28 +252,48 @@ int main() {
 	map<int, Student> studentMapNew(studentMap.begin(), studentMap.end());
 	map<int, Student>::iterator it1 = studentMapNew.begin();
 	it1 = studentMapNew.find(3);
-	if (it1 != studentMapNew.end()) {
+	if (it1 != studentMapNew.end())
+	{
 		cout << it1->first << " ";
 		it1->second.display();
 	}
 	cout << "studentMap :" << endl;
 	for (map<int, Student>::iterator it = studentMap.begin();
-			it != studentMap.end(); ++it) {
+		 it != studentMap.end(); ++it)
+	{
 		cout << " key: " << it->first << " value :";
 		it->second.display();
 	}
 
 	map<int, Student, greater<>> studentMap1(studentMap.begin(),
-			studentMap.end());
+											 studentMap.end());
 	cout << "studentMap1 :" << endl;
 	for (map<int, Student>::iterator it = studentMap1.begin();
-			it != studentMap1.end(); ++it) {
+		 it != studentMap1.end(); ++it)
+	{
 		cout << " key: " << it->first << " value :";
 		it->second.display();
 	}
 
 	cout << endl;
 
+	//-------------------------------------------------------------------------
+	{
+		// declare Multimap
+		typedef std::multimap<std::string, int> MapType;
+		MapType myMap;
+
+		// insertion
+		myMap.insert(MapType::value_type("test", 42));
+		myMap.insert(MapType::value_type("test", 45));
+		myMap.insert(MapType::value_type("other-test", 0));
+
+		auto it = myMap.find("test");
+		if (it != myMap.end())
+			std::cout << "value for " << it->first << " is " << it->second << std::endl;
+		else
+			std::cout << "value not found" << std::endl;
+	}
+	//-------------------------------------------------------------------------
 	return 0;
 }
-

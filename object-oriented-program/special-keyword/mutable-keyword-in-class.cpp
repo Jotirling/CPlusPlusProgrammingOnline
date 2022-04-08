@@ -19,37 +19,88 @@
 using namespace std;
 
 // Customer Class
-class Customer {
+class Customer
+{
 	// class Variables
 	string name;
 	mutable int bill;
 
 public:
 	// constructor
-	Customer(string s, int p) {
+	Customer(string s, int p)
+	{
 		name = s;
 		bill = p;
 	}
-	void changeName(string p) {
+	void changeName(string p)
+	{
 		name = p;
 	}
 	// change the bill
-	void changeBill(int b) const {
+	void changeBill(int b) const
+	{
 		bill = b;
 	}
 	// to display
-	void display() const {
+	void display() const
+	{
 		cout << "Customer name is: " << name << endl;
 		cout << "Total payable amount: " << bill << endl;
 	}
 };
 
 // Driver code
-int main() {
-	const Customer c1("Pravasi Meet", 100);
+int main()
+{
+
+	{
+		int d;
+		int const data = 0;
+		data = &d; // error: assignment of read-only variable 'data'
+		*data = 1; // error: assignment of read-only location '* data'
+	}
+
+	{
+		int d;
+		const int data = 0;
+		data = &d; // error: assignment of read-only variable 'data'
+		*data = 1; // error: assignment of read-only location '* data'
+	}
+
+	{
+		int d;
+		const int const data = 0;
+		data = &d; // error: assignment of read-only variable 'data'
+		*data = 1; // error: assignment of read-only location '* data'
+	}
+
+	{
+		int d;
+		const int *data = 0;
+		data = &d;
+		*data = 1; // error: assignment of read-only location '* data'
+	}
+	{
+		int d;
+		int *const data = 0;
+		data = &d; // error: assignment of read-only variable 'data'
+		*data = 1;
+	}
+	{
+		int d;
+		const int *const data = 0;
+		data = &d; // error: assignment of read-only variable 'data'
+		*data = 1; // error: assignment of read-only location '* data'
+	}
+
+	Customer const c1("Pravasi Meet", 100);
 	c1.display();
 	c1.changeBill(150);
 	c1.display();
+
+	cout << endl
+		 << "Changing data member in the const funtion using mutable keyword:" << endl
+		 << endl;
 
 	Customer c2("Pravasi Meet", 100);
 	c2.display();

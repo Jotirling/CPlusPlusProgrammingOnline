@@ -21,7 +21,7 @@
 //			for static_cast conversions.
 //	 6. Intension are more clear in C++ style cast (express your intent better and make code review easier)
 //	 7. Finding is easy.
-//	 8. Error found at compile—time.
+//	 8. Error found at compile time.
 
 #include <iostream>
 using namespace std;

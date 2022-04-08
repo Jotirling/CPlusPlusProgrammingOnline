@@ -12,24 +12,34 @@
 using namespace std;
 
 #ifndef NULL
-int main() {
+int main()
+{
 	string str = "[ [ [ {} {} ]]] {}";
 	stack<char> Stack;
-	for (size_t i = 0; i < str.length(); i++) {
+	for (size_t i = 0; i < str.length(); i++)
+	{
 		if ('{' == str[i])
 			Stack.push(str[i]);
-		else if ('}' == str[i]) {
+		else if ('}' == str[i])
+		{
 			Stack.pop();
-		} else if ('[' == str[i]) {
+		}
+		else if ('[' == str[i])
+		{
 			Stack.push(str[i]);
-		} else if (']' == str[i]) {
+		}
+		else if (']' == str[i])
+		{
 			Stack.pop();
 		}
 	}
 
-	if (Stack.empty()) {
+	if (Stack.empty())
+	{
 		cout << "Valid" << endl;
-	}else{
+	}
+	else
+	{
 		cout << "Not Valid" << endl;
 	}
 }
@@ -42,18 +52,19 @@ int main() {
 using namespace std;
 
 #ifndef NULL
-int main() {
-	int variable, reminder, reverse;
-
-	cout << "Enter Number: ";
-	cin >> variable;
-
-	while (variable != 0) {
-		reminder = variable % 10;
-		reverse = reverse * 10 + reminder;
-		variable /= 10;
+int main()
+{
+	int number, reverse_number = 0;
+	cout << "Enter a number to reverse value:"; // allow user to enter a number
+	cin >> number;								// takes value from user
+	while (number != 0)
+	{
+		reverse_number = reverse_number * 10;
+		reverse_number = reverse_number + number % 10;
+		number = number / 10;
 	}
-	cout << "reverse variable: " << reverse << endl;
+	cout << "Reverse of entered number is:";
+	cout << reverse_number; // print reverse value
 	return 0;
 }
 #endif
@@ -64,15 +75,54 @@ int main() {
 
 using namespace std;
 
-//#ifndef NULL
-int main() {
+#ifndef NULL
+int main()
+{
 	char charVar = '&';
-	cout << (int) charVar << endl;
-	char S[] = "Jotirling Swamiriya";
+	cout << (int)charVar << endl;
+
+	char S[] = "Jotirling Swami Priya";
 	int len = strlen(S);
 	for (int i = 0; i < len / 2; ++i)
-		std::swap(S[i], S[len - i - 1]);
+	{
+
+		// std::swap(S[i], S[len - i - 1]);
+
+		char temp = S[len - i - 1];
+		S[len - i - 1] = S[i];
+		S[i] = temp;
+	}
 	cout << S << endl;
 }
-//#endif
+#endif
 
+
+
+//  3. seperate word from char array
+
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+// #ifndef NULL
+int main()
+{
+	char S[] = "Jotirling Swami Priya";
+	int i = 0;
+	string chunk;
+	while (S[i] != '\0')
+	{
+		if (S[i] == ' ')
+		{
+			cout << chunk << " ";
+			chunk = "";
+		}
+
+		chunk.push_back(S[i]);
+
+		i++;
+	}
+	cout << chunk << " ";
+}
+// #endif
