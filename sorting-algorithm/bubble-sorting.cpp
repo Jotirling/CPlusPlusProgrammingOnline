@@ -62,6 +62,13 @@ void print(int array[], int size)
     cout << endl;
 }
 
+void swap(int *a, int *b)
+{
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+
 void bubbleSort(int array[], int size)
 {
     int i, j, temp;
@@ -75,9 +82,7 @@ void bubbleSort(int array[], int size)
         {
             if (array[j] > array[j + 1])
             {
-                temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
+                swap(array[j], array[j + 1]);
             }
         }
     }
@@ -88,9 +93,9 @@ void bubbleSortOptimised(int array[], int size)
     int i, j;
     bool flag = false;
     cout << "with optimization" << endl;
+
     for (i = 0; i < size - 1; i++)
     {
-
         flag = false;
         cout << "pass:" << ++pass << " Result : ";
         print(array, size);
@@ -99,25 +104,23 @@ void bubbleSortOptimised(int array[], int size)
         {
             if (array[j] > array[j + 1])
             {
-                int temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
-
+                swap(array[j], array[j + 1]);
                 flag = true;
             }
         }
-        if (flag == 0) // new optimization
+        if (flag == false) // new optimization
             break;
     }
 }
 
 int main()
 {
-    int array[] = {5, 1, 4, 2, 3}; // {1, 2, 3, 4, 5};
+    int array[] = {5, 1, 4, 2, 3};
     int size = sizeof(array) / sizeof(int);
     bubbleSortOptimised(array, size);
     pass = 0;
-    bubbleSort(array, size);
+    int array1[] = {5, 1, 4, 2, 3};
+    bubbleSort(array1, size);
 
     return 0;
 }
