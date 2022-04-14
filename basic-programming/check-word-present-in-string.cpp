@@ -15,33 +15,37 @@ long findLength(const char *search_text)
 
 int main()
 {
-    char text[] = "hello as   my \n name is asd there is some  other string behind it asdf";
-    char search_text[] = "asdf";
-    int pos_search = 0;
+    char text[] = "joti loved priya and priya loved joti also jotipriya loves prajot";
+    char search_text[] = "jotipriya";
+    int pos_search = 0, pos_text = 0;
+    bool flag = false;
 
-    for (int pos_text = 0; pos_text < findLength(text); ++pos_text)
+    for (pos_text = 0; pos_text < findLength(text); pos_text++)
     {
         if (text[pos_text] == search_text[pos_search])
         {
-
-            ++pos_search;
-            cout << pos_search << " - " << text[pos_text] << " ";
+            pos_search++;
             if (pos_search == findLength(search_text))
             {
-                // match
-                cout << "\nmatch from " << pos_text - pos_search << " to " << pos_text << endl;
-                return 0;
+                cout << "match found from " << pos_text - pos_search << " to " << pos_text << endl;
+                flag = true;
+                break;
             }
         }
         else
         {
-            if (pos_search)
-                cout << endl;
             pos_search = 0;
+            flag = false;
         }
     }
 
-    // no match
-    printf("no match\n");
+    if (!flag)
+        cout << "no match found" << endl; // no match
+    else
+        for (int i = pos_text - pos_search; i <= pos_text; i++)
+        {
+            cout << text[i] << " ";
+        }
+
     return 0;
 }

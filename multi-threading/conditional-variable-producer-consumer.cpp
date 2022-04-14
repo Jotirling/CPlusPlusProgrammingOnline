@@ -44,7 +44,6 @@ condition_variable cond;
 deque<int> deque_;
 void producer(int val)
 {
-
 	while (val)
 	{
 		unique_lock<mutex> ulock(mtx);

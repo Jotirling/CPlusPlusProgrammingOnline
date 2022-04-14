@@ -39,6 +39,11 @@
 //             Stable	            YES
 //         The space complexity of counting sort is O(max). The larger the range of elements, the larger the space complexity.
 
+//  NOTES:
+//         This is efficient sorting algorithm if range is almost similar to the number of objects to be sorted.
+//         It is best when the range is equal to number of objects to be sorted.
+//         It is used in radix sort as a part of algorithms.
+
 #include <iostream>
 
 using namespace std;

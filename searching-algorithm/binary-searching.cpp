@@ -13,8 +13,8 @@
 
 // Working of Binary search
 // There are two methods to implement the binary search algorithm -
-//      1. Iterative method - space complexity will be O(1) 
-//      2. Recursive method - space complexity will be O(log n) 
+//      1. Iterative method - space complexity will be O(1)
+//      2. Recursive method - space complexity will be O(log n)
 // The recursive method of binary search follows the divide and conquer approach.
 
 // Binary Search complexity
@@ -45,8 +45,8 @@ using namespace std;
 
 int binarySearchIterative(int array[], int beg, int end, int value)
 {
-    end = end - 1;
-    while (beg <= end)
+    // end = end - 1;
+    while (end >= beg)
     {
         int mid = (beg + end) / 2;
 
@@ -60,7 +60,6 @@ int binarySearchIterative(int array[], int beg, int end, int value)
     }
     return -1;
 }
-
 
 int binarySearchRecursive(int array[], int beg, int end, int value)
 {
