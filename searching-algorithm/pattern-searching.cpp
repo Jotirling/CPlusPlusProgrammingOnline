@@ -2,7 +2,7 @@
 
 // C++ program for Naive Pattern
 // Searching algorithm
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 void search(char pat[], char txt[])

@@ -26,7 +26,7 @@ int main()
 //		3. Size of arrays are fixed whereas the vectors are resizable i.e
 //			they can grow and shrink as vectors are allocated on heap memory.
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #ifndef NULL
@@ -70,7 +70,7 @@ int main() {
 
 //		4. Arrays have to be deallocated explicitly if defined dynamically whereas vectors are automatically de-allocated from heap memory.
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #ifndef NULL
@@ -89,7 +89,7 @@ int main() {
 //			passing a vector to a function, there is no such need as vector maintains variables
 //			which keeps track of size of container at all times.
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #ifndef NULL
@@ -111,7 +111,7 @@ int main() {
 //		8. Arrays cannot be returned unless dynamically allocated from a function whereas vectors can be returned from a function.
 
 // Program to demonstrate arrays cannot be returned
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #ifndef NULL
@@ -143,7 +143,7 @@ int main() {
 #endif
 
 // Program to demonstrate vector can be returned
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #ifndef NULL
@@ -176,7 +176,7 @@ int main() {
 
 //		9. Arrays cannot be copied or assigned directly whereas Vectors can be copied or assigned directly.
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #ifndef NULL

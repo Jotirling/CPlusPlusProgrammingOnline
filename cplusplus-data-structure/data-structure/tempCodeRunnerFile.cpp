@@ -1,1 +1,1 @@
-newArray
+one_ptr

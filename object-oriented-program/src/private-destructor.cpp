@@ -89,7 +89,7 @@ int main() {
 
 //		5. In the case where the destructor is declared private, an instance of the class can also be created using the malloc() function. The same is implemented in the below program.
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #ifndef NULL
