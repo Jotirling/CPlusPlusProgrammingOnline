@@ -1,56 +1,105 @@
 #include <iostream>
 using namespace std;
-void arrayPrint(int array[], int size)
+
+int *Array;
+int current = 0;
+int capacity = 1;
+
+void arrayPrint()
 {
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < current; i++)
     {
         cout << "Value at index[" << i << "] value : ";
-        cout << array[i] << " " << endl;
+        cout << Array[i] << " " << endl;
     }
     cout << endl;
 }
 
+void ArrayPop()
+{
+    current--;
+}
+
+int ArraySize()
+{
+    return current;
+}
+
+int ArrayCapacity()
+{
+    return capacity;
+}
+
+void add(int value)
+{
+    if (current == capacity)
+    {
+        capacity = 2 * capacity;
+        int *temp = new int[capacity];
+
+        // copy old item into temp;
+        for (int i = 0; i < current; i++)
+        {
+            temp[i] = Array[i];
+        }
+
+        // delete old and assign new
+        delete[] Array;
+        Array = temp;
+    }
+    else
+    {
+        if (current == 0)
+        {
+            Array = new int[1];
+        }
+    }
+
+    Array[current] = value;
+    current++;
+}
+
+void add(int value, int index)
+{
+    if (index == capacity)
+        add(value);
+    else if (index > capacity)
+    {
+        cout << "invalid index" << endl;
+        return;
+    }
+    else
+    {
+        Array[index] = value;
+    }
+}
+void print()
+{
+    cout << "array_vec elements: ";
+    for (int i = 0; i < current; i++)
+    {
+        cout << Array[i] << " ";
+    }
+    cout << endl;
+}
 int main()
 {
-    // dynamic array creation
-    unsigned int sizeold = 5;
-    cout << "Enter old arraySize: ";
-    cin >> sizeold;
-    int *arrayold = new int(sizeold);
+    add(10);
+    add(20);
+    add(30);
+    add(40);
+    add(50);
 
-    // assign value to array
-    for (int i = 0; i < sizeold; i++)
-    {
-        cin >> arrayold[i];
-    }
-    arrayPrint(arrayold, sizeold);
+    print();
+    add(60, 2);
+    print();
+    add(60, 10);
+    add(60, 2);
+    print();
+    cout << "ArraySize: " << ArraySize() << endl;
+    cout << "ArrayCapacity: " << ArrayCapacity() << endl;
+    ArrayPop();
+    print();
 
-    arrayPrint(arrayold, sizeold);
-
-    // dynamic array resize creation
-
-    unsigned int sizenew = 10;
-    cout << "Enter new arraySize: ";
-    cin >> sizenew;
-    int *arraynew = new int(sizenew);
-    arraynew = new int(sizenew);
-
-    // copy old items into newArray
-    for (int i = 0; i < sizeold; i++)
-    {
-        arraynew[i] = arrayold[i];
-    }
-    arrayPrint(arraynew, sizeold);
-
-    // free OR delete old array
-    delete[] arrayold;
-
-    // assign remaining value to new array
-    for (int i = sizeold; i < sizenew; i++)
-    {
-        cout << sizenew << "Enter index[" << i << "]value : ";
-        cin >> arraynew[i];
-        arrayPrint(arraynew, i);
-    }
-    arrayPrint(arraynew, sizenew);
+    return 0;
 }

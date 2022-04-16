@@ -72,7 +72,7 @@ int main(void) {
 //		A normal or auto variable is destroyed when a function call where the variable was declared is over.
 //
 //	For example, we can use static int to count a number of times a function is called,
-//		but an auto variable can�t be used for this purpose.
+//		but an auto variable can't be used for this purpose.
 
 #include<iostream>
 #ifndef NULL

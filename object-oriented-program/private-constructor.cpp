@@ -23,25 +23,30 @@ using namespace std;
 
 #ifndef NULL
 // class A
-class A{
+class A
+{
 private:
-	A(){
-	cout << "constructor of A" << endl;
+	A()
+	{
+		cout << "constructor of A" << endl;
 	}
 	friend class B;
 };
 
 // class B, friend of class A
-class B{
+class B
+{
 public:
-	B(){
+	B()
+	{
 		A a1;
 		cout << "constructor of B" << endl;
 	}
 };
 
 // Driver program
-int main(){
+int main()
+{
 	B b1;
 	return 0;
 }
@@ -59,25 +64,25 @@ int main(){
 //		3. Named Constructor Idiom :
 //				Since constructor has same name as of class, different constructors are differentiated by their parameter list,
 //					but if numbers of constructors is more, then implementation can become error prone.
-//				With the Named Constructor Idiom, you declare all the class�s constructors in the private or protected sections,
+//				With the Named Constructor Idiom, you declare all the class constructors in the private or protected sections,
 //				and then for accessing objects of class, you create public static functions.
 
-// ambiguous nature of constructor with same no of parameters of same type
+// Constructor Idiom :: ambiguous nature of constructor with same no of parameters of same type
+
 #include <iostream>
 using namespace std;
 
 #ifndef NULL
 class Base
 {
-	public:
-
+public:
 	// Rectangular coordinates
 	Base(int x, int y);
 
 	// Polar coordinates (radius and angle)
 	Base(int r, int a);
 
-	// error: �Base::Base(int, int)� cannot
+	// error: 'Base::Base(int, int)' cannot
 	// be overloaded
 };
 int main()
@@ -95,13 +100,16 @@ int main()
 using namespace std;
 
 #ifndef NULL
-class Base {
+class Base
+{
 private:
 	int x1, y1;
-	Base(int x, int y) {
+	Base(int x, int y)
+	{
 		x1 = x;
 		y1 = y;
 	}
+
 public:
 	static Base Add(int, int);
 	static Base substract(int, int);
@@ -109,21 +117,25 @@ public:
 };
 
 // utility function for displaying of coordinates
-void Base::display() {
+void Base::display()
+{
 	cout << "\tx - " << this->x1 << endl;
 	cout << "\ty - " << this->y1 << endl;
 }
 
 // return polar coordinates
-Base Base::Add(int x, int y) {
+Base Base::Add(int x, int y)
+{
 	return Base(x + 10, y + 10);
 }
 
 // return rectangular coordinates
-Base Base::substract(int x, int y) {
+Base Base::substract(int x, int y)
+{
 	return Base(x - 10, y - 10);
 }
-int main() {
+int main()
+{
 	Base pp = Base::Add(10, 10);
 	cout << "add : " << endl;
 	pp.display();
@@ -134,4 +146,3 @@ int main() {
 	return 0;
 }
 #endif
-

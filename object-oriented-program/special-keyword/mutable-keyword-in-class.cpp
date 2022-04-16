@@ -13,7 +13,8 @@
 //
 //	What is the need of mutable?
 //		1. We can change the class data member via const class object of class through the const member function.
-//		3. By using mutable keyword in front of the variable in class we can update/change the value of variable in const member function.
+//		2. By using mutable keyword in front of the variable in class we can update/change the value of variable in const member function.
+// 		3. You cannot use the mutable specifier with names declared as static or const, or reference.
 
 #include <iostream>
 using namespace std;

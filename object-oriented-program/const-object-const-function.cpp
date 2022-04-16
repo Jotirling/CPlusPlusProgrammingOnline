@@ -22,7 +22,7 @@
 
 //		1. The member functions and member function arguments, the objects of a class can also be declared as const.
 //		2. When a function is declared as const, it can be called on any type of object, const object as well as non-const objects.
-//		3. A function becomes const when the const keyword is used in the function�s declaration.
+//		3. A function becomes const when the const keyword is used in the function's declaration.
 //		4. The idea of const functions is not to allow them to modify the object on which they are called.
 //		5. It is recommended the practice to make as many functions const as possible so that accidental changes to objects are avoided.
 //		7. constant member function of a class that never changes any class data members, and it also does not call any non-const function.

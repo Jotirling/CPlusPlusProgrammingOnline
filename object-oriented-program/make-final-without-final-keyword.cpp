@@ -12,7 +12,7 @@
 //
 //	SOLUTION:
 //		a. Make default constructor of Final class as private.
-//		b. Inherite Final class as virtual in our class which we want to make non�inheritable.
+//		b. Inherite Final class as virtual in our class which we want to make non'inheritable.
 //		c. Make our class as friend inside Final class.
 //			(so that only our class can call the constructor of Final class, not the derived class)
 //	Point a - 	By making the Final class constructor private we will avoid

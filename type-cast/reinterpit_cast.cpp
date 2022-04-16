@@ -9,21 +9,14 @@
 //		*** reinterpret_cast ***
 // 	Notes:
 //		1. It can perform dangerous conversion because it tan typecast any pointer to any other pointer.
-//
 //		2. reinterpret_cast is a type of casting operator used in C++.
-//
-//
 //		3. It is used to convert a pointer of some data type into a pointer of another data type,
 //			even if the the data types before and after conversion are different.
-//
 //		4. It does not check if the pointer type and data pointed by the pointer is same or not.
-//
 //		5. Syntax :
 //		 	 	 data_type *var_name = reinterpret_cast <data_type *>(pointer_variable);
-//
 //		6. Return Type
 //		 	 It doesnt have any return type. It simply converts the pointer type.
-//
 //		7. Parameters
 //			It takes only one parameter i.e., the source pointer variable (p in above example).
 // 	BOTTOM LINE:

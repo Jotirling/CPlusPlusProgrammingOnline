@@ -20,7 +20,7 @@
 //
 //	Example:
 //		Consider the following simple program as an example of runtime polymorphism.
-//		The main thing to note about the program is that the derived class�s function is called using a base class pointer.
+//		The main thing to note about the program is that the derived class's function is called using a base class pointer.
 //		The idea is that virtual functions are called according to the type of the object instance pointed to or referenced,
 //			not according to the type of the pointer or reference.
 //		In other words, virtual functions are resolved late, at runtime.

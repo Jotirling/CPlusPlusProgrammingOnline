@@ -16,7 +16,7 @@
 //		2. define class as final
 
 // 1. define function as final
-//		a. Sometimes you don�t want to allow derived class to override the base class� virtual function.
+//		a. Sometimes you don't want to allow derived class to override the base class' virtual function.
 //		b. C++ 11 allows built-in facility to prevent overriding of virtual function using final specifier.
 
 

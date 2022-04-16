@@ -19,7 +19,7 @@
 //			}
 //   ***  While condition  ***
 //		1. The initialization and the condition checking is done at the beginning of the loop.
-//		2. It is used only when the number of iterations isn�t known.
+//		2. It is used only when the number of iterations isn't known.
 //		3. If the condition is not mentioned in the 'while' loop, it results in a compilation error.
 //		4. If the initialization is done when the condition is being checked, then
 //				initialization occurs every time the loop is iterated through.
@@ -29,7 +29,7 @@
 //		7. The iterations do not occur if the condition at the first iteration results in False.
 //		8. It is also known as an entry-controlled loop
 //		9. here is no condition at the end of the loop.
-//		10. It doesn�t need to execute at least one.
+//		10. It doesn't need to execute at least one.
 //
 //		Syntex:
 //		while ( condition) {

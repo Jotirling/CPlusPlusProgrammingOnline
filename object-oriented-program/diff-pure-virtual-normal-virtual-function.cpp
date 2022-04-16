@@ -10,18 +10,18 @@
 //		1. A virtual function is a member function which is declared within a base class
 //		2. Is re-defined(Overriden) by a derived class.
 //		3. When you refer to a derived class object using a pointer or a reference to the base class,
-//		4. you can call a virtual function for that object and execute the derived class�s version of the function.
+//		4. you can call a virtual function for that object and execute the derived class's version of the function.
 //
 //	Pure Virtual Functions in C++:
 //		1. A pure virtual function (or abstract function) in C++ is a virtual function
-//		2. It dosen�t contant an implementation, we only declare it.
+//		2. It dosen't contant an implementation, we only declare it.
 //		3. A pure virtual function is declared by assigning 0 in the declaration.
 //
 //	Similarities between virtual function and pure virtual function
 //
 //		These are the concepts of Run-time polymorphism.
 //		Prototype i.e. Declaration of both the functions remains the same throughout the program.
-//		These functions can�t be global or static.
+//		These functions can't be global or static.
 //
 //	Difference between virtual function and pure virtual function in C++
 //

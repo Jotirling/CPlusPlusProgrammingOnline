@@ -10,7 +10,7 @@
 //		2. We must be avoided whenever possible.
 //		3. All the C++ implementations need to call the version of the function defined at the level of the
 //			hierarchy in the current constructor and not further.
-//		4. You can call a virtual function in a constructor. The Objects are constructed from the base up, �base before derived�.
+//		4. You can call a virtual function in a constructor. The Objects are constructed from the base up, 'base before derived'.
 //
 // 	 Example : CPP program to illustrate calling virtual methods in constructor/destructor
 //
@@ -21,7 +21,7 @@
 //			Derived(derived) class is not constructed by that time.
 //		4. Therefore, it is dangerous to call the member function of class whose object is not constructed yet
 //			and compiler calls the Base class version of Base method.
-//		5. Same is with the destructor, when object �d� of Derived gets destroyed, destructor of Derived class is called first
+//		5. Same is with the destructor, when object 'd' of Derived gets destroyed, destructor of Derived class is called first
 //			and then destructor for Base class is called but by this time Derived is already destroyed,
 //			hence Base class version of print Base is called.
 //

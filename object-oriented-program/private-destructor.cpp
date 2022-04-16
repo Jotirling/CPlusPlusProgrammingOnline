@@ -16,84 +16,99 @@
 //		2. For dynamically created objects, it may happen that you pass a pointer to the object to a function and
 //			the function deletes the object. If the object is referred after the function call, the reference will become dangling.
 //
-//Private Destructor :
+//	Private Destructor :
 //		1. The program compiles and runs fine. Hence, we can say that: It is not a compiler error to create private destructors.
 #include <iostream>
 using namespace std;
 
 #ifndef NULL
-class Test {
+class Test
+{
 private:
-	~Test() {
+	~Test()
+	{
 	}
 };
-int main() {
-	return 0;// compile success
+int main()
+{
+	return 0; // compile success
 }
 #endif
 
 // 		2. What do you say about the below program?
-//			The program fails in the compilation. The compiler notices that the local variable �t� cannot be destructed
-//				because the destructor is private.
+//			The program fails in the compilation. The compiler notices that the local variable is cannot be destructed
+//			because the destructor is private.
 
 #include <iostream>
 using namespace std;
 
 #ifndef NULL
-class Test {
+class Test
+{
 private:
-	~Test() {
+	~Test()
+	{
 	}
 };
-int main() {
+int main()
+{
 	Test t; // error: 'Test::~Test()' is private within this context
 	return 0;
 }
 #endif
 
-// 		3.There is no object being constructed, the program just creates a pointer of type �Test *�, so nothing is destructed.
+// 		3.There is no object being constructed, the program just creates a pointer of type Test *t, so nothing is destructed.
 
 #include <iostream>
 using namespace std;
 
 #ifndef NULL
-class Test {
+class Test
+{
 private:
-	~Test() {
+	~Test()
+	{
 	}
 };
-int main() {
+int main()
+{
 	cout << "start" << endl;
 	Test *t; // compile success
 	cout << "end" << endl;
 }
 #endif
 
-//		4. The program also works fine. When something is created using dynamic memory allocation, it is the programmer�s responsibility to delete it. So compiler doesn�t bother.
+//		4. The program also works fine. When something is created using dynamic memory allocation,
+//		it is the programmers responsibility to delete it. So compiler doesn't bother.
 
 #include <iostream>
 using namespace std;
 
 #ifndef NULL
-class Test {
+class Test
+{
 private:
-	~Test() {
+	~Test()
+	{
 	}
 };
-int main() {
+int main()
+{
 	cout << "start" << endl;
 	Test *t = new Test; // compile success
 	cout << "end" << endl;
 }
 #endif
 
-//		5. In the case where the destructor is declared private, an instance of the class can also be created using the malloc() function. The same is implemented in the below program.
+//		5. In the case where the destructor is declared private, an instance of the class can also be
+//		created using the malloc() function.
 
 #include <iostream>
 using namespace std;
 
 #ifndef NULL
-class Test {
+class Test
+{
 public:
 	Test() // Constructor
 	{
@@ -107,9 +122,10 @@ private:
 	}
 };
 
-int main() {
+int main()
+{
 	cout << "start" << endl;
-	Test *t = (Test*) malloc(sizeof(Test)); // compile success
+	Test *t = (Test *)malloc(sizeof(Test)); // compile success
 	cout << "end" << endl;
 	return 0;
 }
@@ -121,41 +137,49 @@ int main() {
 using namespace std;
 
 #ifndef NULL
-class Test {
+class Test
+{
 private:
-	~Test() {
+	~Test()
+	{
 	}
 };
 
 // Driver Code
-int main() {
+int main()
+{
 	cout << "start" << endl;
 	Test *t = new Test;
-//	delete t; // error: 'Test::~Test()' is private within this context
+	//	delete t; // error: 'Test::~Test()' is private within this context
 	cout << "end" << endl;
 }
 #endif
 
-//		7. Following is a way to create classes with private destructors and have a function as a friend of the class. The function can only delete the objects.
+//		7. Following is a way to create classes with private destructors and have a function as a friend of the class.
+//		The function can only delete the objects.
 
 #include <iostream>
 
 #ifndef NULL
-class Test {
+class Test
+{
 private:
-	~Test() {
+	~Test()
+	{
 	}
 
 public:
-	friend void destructTest(Test*);
+	friend void destructTest(Test *);
 };
 
 // Only this function can destruct objects of Test
-void destructTest(Test *ptr) {
+void destructTest(Test *ptr)
+{
 	delete ptr;
 }
 
-int main() {
+int main()
+{
 	cout << "start" << endl;
 	Test *ptr = new Test;
 	destructTest(ptr);

@@ -45,7 +45,7 @@ int main() {
 
 //	Note :
 //			When the constructor is called explicitly the compiler creates a nameless temporary object
-//			It is immediately destroyed. That�s why 2nd line in the output is call to destructor.
+//			It is immediately destroyed. That's why 2nd line in the output is call to destructor.
 #endif
 
 //	1. Explicit call to destructor is only necessary when object is placed at particular location

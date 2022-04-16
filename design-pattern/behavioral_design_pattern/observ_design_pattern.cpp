@@ -29,7 +29,6 @@ using namespace std;
 
 // -1 0 1
 class Observer ;
-class Car;
 
 class Car {
 	int position;
