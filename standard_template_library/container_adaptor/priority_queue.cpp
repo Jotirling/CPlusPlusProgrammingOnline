@@ -88,7 +88,7 @@ using namespace std;
  pop()
  */
 
-//--------------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------
 //	(constructor): constructs the priority_queue
 //
 //		std::priority_queue<int> pq1;
@@ -127,9 +127,9 @@ using namespace std;
 //		emplace : constructs element in-place and sorts the underlying container
 //		pop : removes the top element
 //		swap : swaps the contents
-//--------------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------
 
-//--------------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------
 //	Function Description :
 //		push()	It inserts a new element in a priority queue.
 //			push() adds a copy of an already constructed object into the queue as a parameter,
@@ -144,7 +144,7 @@ using namespace std;
 //			It takes as parameters the parameters that the queue's element types constructor takes.
 //			If your usage pattern is one where you create a new object and add it to the container,
 //			you shortcut a few steps (creation of a temporary object and copying it) by using emplace().
-//--------------------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------
 
 class Student {
 public:
