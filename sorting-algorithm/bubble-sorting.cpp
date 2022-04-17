@@ -49,6 +49,15 @@
 //      It means that the elements are already sorted, and no further iterations are required.
 //      This method will reduce the execution time and also optimizes the bubble sort.
 
+
+
+
+
+
+
+
+
+
 #include <iostream>
 using namespace std;
 int pass;
@@ -64,21 +73,18 @@ void print(int array[], int size)
 
 void swap(int *a, int *b)
 {
-    int t = *a;
-    *a = *b;
-    *b = t;
+    int t = *a;  *a = *b; *b = t;
 }
 
 void bubbleSort(int array[], int size)
 {
-    int i, j, temp;
     cout << "without  optimization" << endl;
-    for (i = 0; i < size - 1; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         cout << "pass:" << ++pass << " Result : ";
         print(array, size);
 
-        for (j = 0; j < size - i - 1; j++)
+        for (int j = 0; j < size - i - 1; j++)
         {
             if (array[j] > array[j + 1])
             {
@@ -90,17 +96,16 @@ void bubbleSort(int array[], int size)
 
 void bubbleSortOptimised(int array[], int size)
 {
-    int i, j;
     bool flag = false;
     cout << "with optimization" << endl;
 
-    for (i = 0; i < size - 1; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         flag = false;
         cout << "pass:" << ++pass << " Result : ";
         print(array, size);
 
-        for (j = 0; j < size - i - 1; j++)
+        for (int j = 0; j < size - i - 1; j++)
         {
             if (array[j] > array[j + 1])
             {

@@ -127,19 +127,19 @@ int Logical_Operators()
 {
     int a = 5, b = 2, c = 6, d = 4;
     if (a == b && c > d)
-        cout << "a equals to b AND c is greater than d\n";
+        cout << "a equals to b AND c is greater than d" << endl;
     else
-        cout << "AND operation returned false\n";
+        cout << "AND operation returned false" << endl;
 
     if (a == b || c > d)
-        cout << "a equals to b OR c is greater than d\n";
+        cout << "a equals to b OR c is greater than d" << endl;
     else
-        cout << "Neither a is equal to b nor c is greater than d\n";
+        cout << "Neither a is equal to b nor c is greater than d" << endl;
 
     if (!b)
-        cout << "b is zero\n";
+        cout << "b is zero" << endl;
     else
-        cout << "b is not zero";
+        cout << "b is not zero" << endl;
 
     return 0;
 }
@@ -226,19 +226,19 @@ int Bitwise_Operators()
 int Assignment_Operators()
 {
     int x = 5;
-    cout << "Initial value of x is " << x << "\n";
+    cout << "Initial value of x is " << x << endl;
 
     x += 5;
-    cout << "x += 5 gives :" << x << "\n";
+    cout << "x += 5 gives :" << x << endl;
 
     x -= 5;
-    cout << "x -= 5 gives : " << x << "\n";
+    cout << "x -= 5 gives : " << x << endl;
 
     x *= 5;
-    cout << "x *= 5 gives :" << x << "\n";
+    cout << "x *= 5 gives :" << x << endl;
 
     x /= 5;
-    cout << "x /= 5 gives : " << x << "\n";
+    cout << "x /= 5 gives : " << x << endl;
 
     return 0;
 }
@@ -254,10 +254,10 @@ int Assignment_Operators()
 
 int sizeof_Operator()
 {
-    cout << "Size of int : " << sizeof(int) << " bytes\n";
-    cout << "Size of char : " << sizeof(char) << " bytes\n";
-    cout << "Size of float : " << sizeof(float) << " bytes\n";
-    cout << "Size of double : " << sizeof(double) << " bytes\n";
+    cout << "Size of int : " << sizeof(int) << " bytes" << endl;
+    cout << "Size of char : " << sizeof(char) << " bytes" << endl;
+    cout << "Size of float : " << sizeof(float) << " bytes" << endl;
+    cout << "Size of double : " << sizeof(double) << " bytes" << endl;
     return 0;
 }
 

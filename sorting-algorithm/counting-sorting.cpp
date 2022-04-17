@@ -73,7 +73,7 @@ void counting_sort(int arr[], int size, int max)
     {
         for (j = 1; j <= count[i]; j++)
         {
-            printf("%d ", i);
+            cout << i << " ";
             if (j != 0)
             {
                 arr[pos] = i;
@@ -81,6 +81,7 @@ void counting_sort(int arr[], int size, int max)
             }
         }
     }
+    cout << endl;
 }
 void printArr(int array[], int n) /* function to print the array */
 {

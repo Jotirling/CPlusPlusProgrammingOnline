@@ -35,3 +35,64 @@
 //             3. member selector - .
 //             4. member pointer selector - *
 //             5. ternary operator - ?:
+
+//    Overloadable Operators :
+//             +	    -	    *	    /	    %	    ^
+//             &	    |	    ~	    !	    ,	    =
+//             <	    >	    <=	    >=	    ++	    --
+//             <<	    >>	    ==	    !=	    &&	    ||
+//             +=	    -=	    /=	    %=	    ^=	    &=
+//             |=	    *=	    <<=	    >>=	    []	    ()
+//             ->	    ->*	    new	    new[]	delete	delete []
+
+//     Non-overloadable Operators :
+//             ::	    .*      .	    ?:
+
+// The Binary operators are:
+
+//         Binary Operator          Description
+//             +	                addition
+//             -	                subtraction
+//             *	                multiplication
+//             /	                division
+//             %	                remainder
+
+//             ==	                equal to
+//             !=	                not equal to
+//             <	                less than
+//             >	                greater than
+//             <=	                less than or equal to
+//             >=	                greater than or equal to
+
+//             &&	                logical and
+//             ||	                logical or
+
+//             &	                bit-wise AND
+//             |	                bit-wise OR
+//             ^	                bit-wise XOR
+//             <<	                bit-wise left-shift
+//             >>	                bit-wise right-shift
+
+//             =	                assignment
+//             +=                	addition assignment
+//             -=	                subtraction assignment
+//             *=	                multiplication assignment
+//             /=	                division assignment
+//             %=	                remainder assignment
+//             &=	                bit-wise AND assignment
+//             |=	                bit-wise OR assignment
+//             ^=	                bit-wise XOR assignment
+//             <<=	                bit-wise left-shift assignment
+//             >>=	                bit-wise right-shift assignment
+
+// The unary operators are:
+
+//         Unary Operator	        Description
+//             +	                make positive
+//             -	                negate
+//             !	                not
+//             ~	                bit-wise not
+//             ++	                auto-increment
+//             --	                auto-decrement
+//             *	                indirection (Dereference)
+//             &	                address of

@@ -47,7 +47,7 @@ int function_overloading()
 
     cout << "x+y = " << add(x, y) << endl;
     cout << "x+y+z = " << add(x, y, z) << endl;
-    cout << "n1+n2 = " << add(n1, n2);
+    cout << "n1+n2 = " << add(n1, n2) << endl;
 
     return 0;
 }
@@ -109,5 +109,5 @@ int function_overridding()
 int main()
 {
     function_overloading();
-    function_overridding
+    function_overridding();
 }

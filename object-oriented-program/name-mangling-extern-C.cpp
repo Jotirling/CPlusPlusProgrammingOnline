@@ -74,6 +74,7 @@ extern "C"
 {
 #endif
 // Declarations of this file
+// add C style header files
 #ifdef __cplusplus
 }
 #endif
