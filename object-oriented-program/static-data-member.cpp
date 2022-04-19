@@ -44,14 +44,15 @@ int main()
 // Output:
 //     Derived's Constructor Called
 #endif
-//     The above program calls only B’s constructor,
-//     it doesn’t call A’s constructor.
+
+//     The above program calls only Derived's Constructor Called ,
+//     it doesn’t call Base's Constructor Called .
 //     The reason :
 //     static members are only declared in a class declaration,
 //     static members are not defined in class.
 //     They must be explicitly defined outside the class using the scope resolution operator.
 
-//     If we try to access static member ‘a’ without an explicit definition of it, we will get a compilation error.
+//     If we try to access static member 'var_base' without an explicit definition of it, we will get a compilation error.
 //     For example, the following program fails in the compilation.
 
 #ifndef NULL
@@ -69,18 +70,18 @@ class Derived
 
 public:
     Derived() { cout << "Derived's constructor called " << endl; }
-    static Base getA() { return var_base; }
+    static Base getBaseVar() { return var_base; }
 };
 
 int main()
 {
     Derived b;
-    Base var_base = b.getA();
+    Base var_base = b.getBaseVar();
     return 0;
 }
 #endif
 
-//  Solution:   If we add the definition of a the program will work fine and will call A’s constructor.
+//  Solution:   If we add the definition of 'static Base var_base' the program will work fine and will call Base’s constructor.
 
 #ifndef NULL
 class Base
