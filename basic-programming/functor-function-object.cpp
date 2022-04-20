@@ -5,6 +5,7 @@
 //     Consider a function1(int ) that takes only one argument.
 //     However, while calling function1(int ) we have a lot more information that
 //     We would like to pass to that, but we cannot as it accepts only one parameter.
+
 //     What can be done?
 
 //     Functors are objects that can be treated as they are a function or
@@ -59,11 +60,62 @@ public:
     }
 };
 
-int main()
+int SampleFunctor()
 {
     Multiply mul(12);
     cout << mul(2) << endl;
     cout << mul(3) << endl;
 
     return 0;
+}
+/*
+  Function Object As known As Functors in C++
+    Functors in C++ are short for function objects.
+    Function objects are instances of C++ classes that have the operator() defined,
+    Which gives the class object function semantics.
+    In the class-like functions constructed in C++, the function is composed of the return type, function name, parameters, and function body.
+    The basic accepted form of functors looks like this...
+
+
+    class Functor
+    {
+    public:
+        R operator()(P1, ..., Pn)
+        {
+            return R();
+        }
+    };
+
+*/
+
+struct doSomethingFunctor
+{
+    int i;
+    bool b;
+    double d;
+    bool b1;
+    doSomethingFunctor(int i, bool b, double d, bool b1) : i(i), b(b), d(d), b1(b1)
+    {
+    }
+    bool operator()(bool b1)
+    {
+        return this->b1 == b1;
+    }
+};
+
+int complexFunctor()
+{
+    doSomethingFunctor d1(100, false, 0.99, false);
+    doSomethingFunctor d2(100, false, 0.99, true);
+
+    cout << d1(true) << endl;
+    cout << d2(true) << endl;
+
+    return 0;
+}
+
+int main()
+{
+    SampleFunctor();
+    complexFunctor();
 }
