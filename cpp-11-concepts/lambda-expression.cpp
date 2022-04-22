@@ -107,6 +107,9 @@ int main()
 //     By default, lambda functions cannot access variables of the enclosing function.
 //     In order to access those variables, we use the capture clause.
 
+//     Note: 
+//     Here, we can only read the variable inside the lambda body but cannot modify it.
+    
 //     We can capture the variables in two ways:
 //        1. Capture by Value
 
