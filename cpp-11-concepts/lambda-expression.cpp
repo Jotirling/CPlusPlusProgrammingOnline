@@ -18,7 +18,7 @@
 //  Lambda expression was introduced in C++11 for creating anonymous functors
 //  in a more convenient and concise way.
 
-//  They are more convenient because we do not  need to overload the () operator
+//  They are more convenient because we do not need to overload the () operator
 //  in a separate class or struct.
 
 // Creating a Lambda Expression in C++
@@ -37,7 +37,7 @@
 
 #include <iostream>
 using namespace std;
-
+#ifndef NULL
 int main()
 {
 
@@ -53,7 +53,7 @@ int main()
 
     return 0;
 }
-
+#endif
 //      2. C++ Lambda Function With Return Type
 
 // syntex:
@@ -70,7 +70,7 @@ int main()
 
 #include <iostream>
 using namespace std;
-
+#ifndef NULL
 int main()
 {
 
@@ -101,15 +101,15 @@ int main()
 
     return 0;
 }
-
+#endif
 // //       3. C++ Lambda Function Capture Clause
 
 //     By default, lambda functions cannot access variables of the enclosing function.
 //     In order to access those variables, we use the capture clause.
 
-//     Note: 
+//     Note:
 //     Here, we can only read the variable inside the lambda body but cannot modify it.
-    
+
 //     We can capture the variables in two ways:
 //        1. Capture by Value
 
@@ -131,7 +131,7 @@ int main()
 
 #include <iostream>
 using namespace std;
-
+#ifndef NULL
 int main()
 {
 
@@ -149,7 +149,7 @@ int main()
 
     return 0;
 }
-
+#endif
 //        2. Capture by reference
 
 // Syntex :
@@ -167,7 +167,7 @@ int main()
 // }
 
 // Example of Lambda expression external veriable capture by reference:
-
+#ifndef NULL
 int main()
 {
     int length = 15;
@@ -181,15 +181,13 @@ int main()
 
     cout << "area of riangle: " << area << endl;
 }
-
-
+#endif
 //----------------------------------------------------------------------------------------
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
 using namespace std;
-
 class Student
 {
 
@@ -243,12 +241,34 @@ int main()
 
     sort(begin(StrudentVec), end(StrudentVec), [](Student &lhs, Student &rhs)
          { return lhs.marks < rhs.marks; });
-    cout << endl;
+
+    cout << "Using functor Predicate: " << endl;
+    
     for_each(begin(StrudentVec), end(StrudentVec), [](Student &obj)
              { cout << obj.marks << " " << obj.name << endl; });
 
     sort(begin(StrudentVec), end(StrudentVec), StudentFunctor()); // functor
+
     cout << endl;
+
+    for_each(begin(StrudentVec), end(StrudentVec), [](Student &obj)
+             { cout << obj.marks << " " << obj.name << endl; });
+
+    auto StudentLambda = []() -> bool
+    {
+        return true;
+    };
+
+    auto pred = [](const Student &a, const Student &b) -> bool
+    {
+        return a.marks > b.marks;
+    };
+
+    sort(begin(StrudentVec), end(StrudentVec),
+         pred);
+
+    cout << "Using Lambda Predicate: " << endl;
+
     for_each(begin(StrudentVec), end(StrudentVec), [](Student &obj)
              { cout << obj.marks << " " << obj.name << endl; });
 

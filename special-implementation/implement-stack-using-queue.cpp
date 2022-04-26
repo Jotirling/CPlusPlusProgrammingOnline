@@ -1,7 +1,7 @@
 /* Program to implement a stack using
 two queue */
 #include <iostream>
-
+#include <queue>
 using namespace std;
 
 class Stack
@@ -29,7 +29,6 @@ public:
 
         // swap the names of two queues
         queue<int> q;
-        ;
         Queue1 = Queue2;
         Queue2 = q;
     }

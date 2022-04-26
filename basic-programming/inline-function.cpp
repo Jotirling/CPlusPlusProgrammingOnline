@@ -77,4 +77,5 @@ int main()
 //         2. Use of several inline functions can reduce instruction cache hit rate.
 //         3. It can increase compile time overhead if any changes are made inside the inline function and
 //             then the code will have to recompile again to save the changes.
-//         4. If the size of the binary executable file is large then it can cause thrashing.
+//         4. If the size of the binary executable file is large then 
+//            it can cause thrashing.

@@ -212,6 +212,7 @@ void Arithmetic_Functors()
     std::cout << "Negate(20): " << Negate(20) << endl;
 
     Student S1{90, "Joti", true}, S2{80, "Swami", false}, S3{90, "Priya", true};
+
     std::cout << "Plus S1 + S2 : " << S1 + S2 << endl;
     std::cout << "Minus S1 - S2 : " << S1 - S2 << endl;
     std::cout << "Multiplies S1 * S2 : " << S1 * S2 << endl;
@@ -340,10 +341,10 @@ void Bitwise_Functors()
 
 int main()
 {
-    // normal_functor();
-    // Arithmetic_Functors();
-    // Relational_Functors();
-    // Logical_Functors();
+    normal_functor();
+    Arithmetic_Functors();
+    Relational_Functors();
+    Logical_Functors();
     Bitwise_Functors();
     return 0;
 }
