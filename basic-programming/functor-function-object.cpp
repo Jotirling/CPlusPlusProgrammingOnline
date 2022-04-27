@@ -103,6 +103,7 @@ struct doSomethingFunctor
     }
 };
 
+
 int complexFunctor()
 {
     doSomethingFunctor d1(100, false, 0.99, false);

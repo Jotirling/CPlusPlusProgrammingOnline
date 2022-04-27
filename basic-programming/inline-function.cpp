@@ -1,19 +1,23 @@
 // // C++ Inline Function with Examples
 //     The objective behind using a function is to save memory space.
-//     When you call a function, it takes a lot of extra time in performing tasks such as jumping to the calling function.
-//     Sometimes, the time taken for jumping to the calling function will be greater than the time taken to execute that function.
+//     When you call a function, it takes a lot of extra time in performing tasks 
+//          such as jumping to the calling function.
+//     Sometimes, the time taken for jumping to the calling function will be greater than
+//          the time taken to execute that function.
 
 //     You can overcome this problem with the help of macros.
-//     But the main drawback of macros is that they are not functions that’s why the error checking won’t happen while compilation.
+//     But the main drawback of macros is that they are not functions that’s 
+//          why the error checking won’t happen while compilation.
 
 //     But in C++, you can make use of inline functions to completely ignore this problem.
 
 //     Let us learn more about inline function in C++.
 
 //     Inline Function in C++ from the name you can easily say that
-//     an inline function is a function that is expanded in line when it is invoked. Also helps in saving time.
-//     Using inline functions, the compiler will replace the function call with the function code which will reduce
-//         the overhead of function calls.
+//     an inline function is a function that is expanded in line when it is invoked. 
+//          Also helps in saving time.
+//     Using inline functions, the compiler will replace the function call with the
+//          function code which will reduce the overhead of function calls.
 
 //     Following function that compiler may not perform inlining:-
 

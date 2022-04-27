@@ -22,10 +22,9 @@
         shmget():
             int shmget(key_t, size_tsize, intshmflg);
             It returns an identifier for the shared memory segment.
-        shmat():
-            Before you can use a shared memory segment, you have to attach yourself
-            to it using shmat().
         void *shmat(int shmid ,void *shmaddr ,int shmflg);
+            Before you can use a shared memory segment, 
+            You have to attach yourself to it using shmat().
             shmid is shared memory id.
             shmaddr specifies specific address to use.
             But we should set it to zero and OS will automatically choose the address.

@@ -6,7 +6,6 @@
 //     Pointer variables are used in the function definition.
 //     With the help of the Call by address method, the function can access the actual parameters and modify them.
 
-
 #include <iostream>
 using namespace std;
 

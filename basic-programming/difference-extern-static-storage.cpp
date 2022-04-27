@@ -8,7 +8,8 @@
 
 //     Linking in C
 //     There are three types of linkage - external, internal and none.
-//     Each declared object in your program (i.e. variable or function) has some kind of linkage
+//     Each declared object in your program 
+//          (i.e. variable or function) has some kind of linkage
 //     - usually specified by the circumstances of the declaration.
 //     - Linkage of an object says how is the object propagated through the whole program.
 //     - Linkage can be modified by both keywords extern and static.

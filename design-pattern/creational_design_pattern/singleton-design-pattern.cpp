@@ -45,7 +45,7 @@ public:
     {
         if (m_SingleInstance == NULL)
         {
-            std::lock_guard<std::mutex> g(mtx); // lock
+            std::lock_guard<std::mutex> g_lock(mtx); // lock
             if (m_SingleInstance == NULL)
             {
                 m_SingleInstance = new (std::nothrow) SingleInstance; // Threads are insecure without locking, and multiple instances are created when threads are concurrent
@@ -99,3 +99,12 @@ int main(void)
     std::cout << "main() : End! " << std::endl;
     return 0;
 }
+// Output:
+//     main() : Start!
+//     Hi, I am a thread ID:[0x800083dd0]
+//     Hi, I am a thread ID:[0x800083ed0]
+//     Constructor Called
+//     My instance memory address is:0x800061900
+//     My instance memory address is:0x800061900
+//     Destructor Called
+//     main() : End!
