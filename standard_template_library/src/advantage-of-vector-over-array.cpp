@@ -6,9 +6,10 @@
  */
 
 //	Advantages of Vector over arrays :
-//		1. Vector is template class and is C++ only construct whereas arrays are built-in language construct and present in both C and C++.
-//		2. Vector are implemented as dynamic arrays with list interface whereas arrays can be implemented as statically or
-//			dynamically with primitive data type interface.
+//		1. Vector is template class and is C++ only construct whereas arrays are built-in
+//  		language construct and present in both C and C++.
+//		2. Vector are implemented as dynamic arrays with list interface whereas arrays 
+//			can be implemented as statically or dynamically with primitive data type
 
 #include <iostream>
 using namespace std;

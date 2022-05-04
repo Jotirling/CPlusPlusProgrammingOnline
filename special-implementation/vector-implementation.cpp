@@ -49,6 +49,8 @@ public:
         if (current_element == capacity)
         {
             capacity = 2 * capacity;
+            
+            // allocate new capacity array to temp
             int *temp = new int[capacity];
 
             // copy all element from array_vec into the new temp.
