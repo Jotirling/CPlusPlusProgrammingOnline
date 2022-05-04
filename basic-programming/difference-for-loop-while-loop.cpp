@@ -54,10 +54,12 @@
 //
 #include <iostream>
 #ifndef NULL
-int main() {
+int main()
+{
 
 	/* for loop execution */
-	for (int a = 10; a < 20; a++) {
+	for (int a = 10; a < 20; a++)
+	{
 		printf("value of a: %d\n", a);
 	}
 	return 0;
@@ -67,11 +69,13 @@ int main() {
 //
 #include <iostream>
 #ifndef NULL
-int main() {
+int main()
+{
 	/* local variable definition */
 	int a = 10;
 	/* while loop execution */
-	while (a < 20) {
+	while (a < 20)
+	{
 		printf("value of a: %d\n", a);
 		a++;
 	}
@@ -82,12 +86,33 @@ int main() {
 //
 #include <iostream>
 #ifndef NULL
-int main() {
+int main()
+{
 	int a = 10; // Local variable declaration:
-	do { // do loop execution
+	do
+	{ // do loop execution
 		printf("value of a: %d\n", a);
 		a = a + 1;
 	} while (a < 20);
 	return 0;
 }
 #endif
+
+/*
+	Main Differences Between For loop and While loop
+
+	For loop, the number of iterations to be conducted is already known whereas 
+	While loop the number of iterations are not known.
+
+	For loop contains only a single condition whereas 
+	while loop may contain a set of commands to be executed together.
+
+	In for loop, initialization of command is done only once but in while loop initialization of command is needed each time the iteration of command is done.
+
+	If the condition is absent in for loop, the loop iterates for an infinite number of times whereas 
+	while loop shows an error in case of the absence of the condition.
+
+	For loop can be used only in case of a known number of iterations whereas 
+	while loop is used only when the number of iterations is not known.
+
+*/

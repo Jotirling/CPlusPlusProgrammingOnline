@@ -26,7 +26,7 @@
 //     4. When wait() returns they also define exit status (which tells our, parent
 //      process why child process terminated) via pointer, If status are not NULL.
 
-//     5. If any process has no child process then wait() returns immediately “-1”.
+//     5. If any process has no child process then wait() returns immediately "-1".
 
 // Example :
 

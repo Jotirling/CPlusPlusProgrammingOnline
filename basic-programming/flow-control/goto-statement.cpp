@@ -26,6 +26,16 @@ using namespace std;
 
 int main()
 {
+    bool value = false;
+    Joti:
+    {
+        cout << "Jotipriya" << endl;
+        value = true;
+    }
+
+    if (!value)
+        goto Joti;
+
     float num, average, sum = 0.0;
     int i, n;
 

@@ -281,7 +281,7 @@ void fun()
 //     You will get some bad results if you call a destructor on the same object.
 //-----------------------------------------------------------------------------------
 
-// Q.17 Why should you use the “placement_new”?
+// Q.17 Why should you use the "placement_new"?
 // Ans. There are many types of placement_new.
 //     Though a simple way to use this is to place an object at a particular location in memory.
 //     It can be done by supplying the place as a pointer parameter to the new part of a new expression.

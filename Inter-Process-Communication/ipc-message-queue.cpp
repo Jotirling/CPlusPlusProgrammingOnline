@@ -99,12 +99,12 @@ Now, let us check the syntax and certain information on the above calls.
     Step 3 − The sending process performs the following.
     Reads the string input from the user Removes the new line, if it exists
     Sends into message queue Repeats the process until the end of input (CTRL + D)
-    Once the end of input is received, sends the message “end” to signify the end of the process
+    Once the end of input is received, sends the message "end" to signify the end of the process
 
     Step 4 − In the receiving process, performs the following.
     Reads the message from the queue
     Displays the output
-    If the received message is “end”, finishes the process and exits
+    If the received message is "end", finishes the process and exits
 
 
 */

@@ -1,4 +1,4 @@
-// Name Mangling and extern “C” in C++
+// Name Mangling and extern "C" in C++
 
 //     C++ supports function overloading, i.e.,
 //     There can be more than one function with the same name but, different parameters.
@@ -45,9 +45,9 @@ int main()
 //         The reason for compiler error is simple, the name of printf() is changed by the C++ compiler
 //         It doesn’t find the definition of the function with a new name.
 
-//     Solution: Extern “C” in C++.
+//     Solution: Extern "C" in C++.
 
-//     When some code is put in the extern “C” block,
+//     When some code is put in the extern "C" block,
 //     The C++ compiler ensures that the function names are un-mangled -
 //         That the compiler emits a binary file with their names unchanged,
 //         As a C compiler would do.
@@ -67,7 +67,7 @@ int main()
 // Output
 //     GeeksforGeeks
 
-// Therefore, all C style header files (stdio.h, string.h, etc) have their declarations in the extern “C” block.
+// Therefore, all C style header files (stdio.h, string.h, etc) have their declarations in the extern "C" block.
 
 #ifdef __cplusplus
 extern "C"
@@ -83,5 +83,5 @@ extern "C"
 //     1. Since C++ supports function overloading, additional information has to be added to function names
 //         (called Name mangling) to avoid conflicts in binary code.
 //     2. Function names may not be changed in C as it doesn’t support function overloading.
-//         To avoid linking problems, C++ supports the extern “C” block.
-//         C++ compiler makes sure that names inside the extern “C” block are not changed.
+//         To avoid linking problems, C++ supports the extern "C" block.
+//         C++ compiler makes sure that names inside the extern "C" block are not changed.

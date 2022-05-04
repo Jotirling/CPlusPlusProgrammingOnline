@@ -53,7 +53,7 @@ int main()
     return 0;
 }
 
-//   Output of above program is “100”. If we take a look at main(),
+//   Output of above program is "100". If we take a look at main(),
 //     we modified ‘T1’ object using setValue() function
 //     but the changes are also reflected in object ‘T2’.
 //     This type of unexpected changes cause problems.
@@ -111,7 +111,7 @@ int main()
     return 0;
 }
 
-//   Output of above program is “100”. If we take a look at main(),
+//   Output of above program is "100". If we take a look at main(),
 //     we modified ‘T1’ object using setValue() function
 //     but the changes are bot reflected in object ‘T2’.
 //     Because T1 pointer data member are pointing to different addree allocation.

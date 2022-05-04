@@ -68,12 +68,12 @@ Output:
 
 Class::Base
 
-Now we see, that the output is “Class:: Base”. So irrespective of what type object the base pointer is holding, the program outputs the contents of the function of the class whose base pointer is the type of. In this case, also static linking is carried out.
+Now we see, that the output is "Class:: Base". So irrespective of what type object the base pointer is holding, the program outputs the contents of the function of the class whose base pointer is the type of. In this case, also static linking is carried out.
 
 In order to make the base pointer output, correct contents and proper linking, we go for dynamic binding of functions. This is achieved using Virtual functions mechanism which is explained in the next section.
 
 Virtual Function
-For the overridden function should be bound dynamically to the function body, we make the base class function virtual using the “virtual” keyword. This virtual function is a function that is overridden in the derived class and the compiler carries out late or dynamic binding for this function.
+For the overridden function should be bound dynamically to the function body, we make the base class function virtual using the "virtual" keyword. This virtual function is a function that is overridden in the derived class and the compiler carries out late or dynamic binding for this function.
 
 Now let us modify the above program to include the virtual keyword as follows:
 
@@ -98,7 +98,7 @@ Output:
 
 Class::Derived
 
-So in the above class definition of Base, we made show_val function as “virtual”. As the base class function is made virtual, when we assign derived class object to base class pointer and call show_val function, the binding happens at runtime.
+So in the above class definition of Base, we made show_val function as "virtual". As the base class function is made virtual, when we assign derived class object to base class pointer and call show_val function, the binding happens at runtime.
 
 Thus, as the base class pointer contains derived class object, the show_val function body in the derived class is bound to function show_val and hence the output.
 
@@ -171,12 +171,12 @@ Thus in the above program when the base pointer is assigned a derived class obje
 So when the call b->function1_virtual() is made, the function1_virtual from the derived class is called and when the function call b->function2_virtual() is made, as this function pointer points to the base class function, the base class function is called.
 
 Pure Virtual Functions And Abstract Class
-We have seen details about virtual functions in C++ in our previous section. In C++, we can also define a “pure virtual function” that is usually equated to zero.
+We have seen details about virtual functions in C++ in our previous section. In C++, we can also define a "pure virtual function" that is usually equated to zero.
 
 The pure virtual function is declared as shown below.
 
  virtual return_type function_name(arg list) = 0;
-The class which has at least one pure virtual function that is called an “abstract class”. We can never instantiate the abstract class i.e. we cannot create an object of the abstract class.
+The class which has at least one pure virtual function that is called an "abstract class". We can never instantiate the abstract class i.e. we cannot create an object of the abstract class.
 
 This is because we know that an entry is made for every virtual function in the VTABLE (virtual table). But in case of a pure virtual function, this entry is without any address thus rendering it incomplete. So the compiler doesn’t allow creating an object for the class with incomplete VTABLE entry.
 
@@ -202,7 +202,7 @@ Output:
 
 Overriding pure virtual function in the derived class
 
-In the above program, we have a class defined as Base_abstract which contains a pure virtual function which makes it an abstract class. Then we derive a class “Derived_class” from Base_abstract and override the pure virtual function print in it.
+In the above program, we have a class defined as Base_abstract which contains a pure virtual function which makes it an abstract class. Then we derive a class "Derived_class" from Base_abstract and override the pure virtual function print in it.
 
 In the main function, not that first line is commented. This is because if we uncomment it, the compiler will give an error as we cannot create an object for an abstract class.
 
@@ -249,7 +249,7 @@ Base Class:: Destructor
 
 In the above program, we have an inherited derived class from the base class. In the main, we assign an object of the derived class to a base class pointer.
 
-Ideally, the destructor that is called when “delete b” is called should have been that of derived class but we can see from the output that destructor of the base class is called as base class pointer points to that.
+Ideally, the destructor that is called when "delete b" is called should have been that of derived class but we can see from the output that destructor of the base class is called as base class pointer points to that.
 
 Due to this, the derived class destructor is not called and the derived class object remains intact thereby resulting in a memory leak. The solution to this is to make base class constructor virtual so that the object pointer points to correct destructor and proper destruction of objects is carried out.
 

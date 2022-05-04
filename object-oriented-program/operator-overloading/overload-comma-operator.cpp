@@ -1,7 +1,7 @@
 // // Overloading the Comma Operator in C++
 //     In C++, we can overload the comma operator using Operator Overloading.
-//     For Example: For “Send the query X to the server Y and put the result in variable Z”.
-//     The “and” plays the role of the comma.
+//     For Example: For "Send the query X to the server Y and put the result in variable Z".
+//     The "and" plays the role of the comma.
 //     The comma operator (, ) is used to isolate two or more expressions
 //     That are included where only one expression is expected.
 //     When the set of expressions has to be solved for operands, only the rightmost expression is considered.

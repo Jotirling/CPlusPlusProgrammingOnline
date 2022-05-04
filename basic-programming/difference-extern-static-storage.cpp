@@ -122,7 +122,7 @@ int main()
 // a = 15, sa = 60
 
 //     Extern
-//         The extern keyword denotes, that “this identifier is declared here, but is defined elsewhere”.
+//         The extern keyword denotes, that "this identifier is declared here, but is defined elsewhere".
 //         In other words, you tell the compiler that some variable will be available, but its memory is allocated somewhere else.
 //         The thing is, where? Let's have a look at the difference between declaration and definition of some object first.
 //         By declaring a variable, you say what type the variable is and what name it goes by later in your program.

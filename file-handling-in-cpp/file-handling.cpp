@@ -98,9 +98,9 @@ int CreateFile()
 //         Then we apply the open() function on the created object.
 //         We used the if and else statement.
 //             If the file already exists or if it does not exist then it will
-//                 print “File Creation failed!”. Otherwise,
+//                 print "File Creation failed!". Otherwise,
 //             It will create a new file named and it will
-//                 print “Created a New File!” to the screen.
+//                 print "Created a New File!" to the screen.
 
 //     Writing to a file in C++
 //         You can also write data into a file in C++.
@@ -127,12 +127,12 @@ int WriteFile()
 }
 
 //         In the above example, we created a new file named Tech.txt.
-//         We used the stream insertion operator(“<<”) to put data into that file.
-//         And the data is “TechVidvan Tutorial: C++ File Handling!”.
+//         We used the stream insertion operator("<<") to put data into that file.
+//         And the data is "TechVidvan Tutorial: C++ File Handling!".
 
 //     Reading from a file in C++
 //         You can also read data from a file.
-//         Using the stream extraction operator(“>>”), you can read the contents of the file.
+//         Using the stream extraction operator(">>"), you can read the contents of the file.
 
 //     Example:- reading from a file
 
