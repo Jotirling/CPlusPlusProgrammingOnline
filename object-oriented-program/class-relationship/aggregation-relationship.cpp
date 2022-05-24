@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////
-//  composition.cpp - implementing composition relationship        //
+//  aggregation.cpp - implementing aggregation relationship        //
 //                                                                 //
 //  Jotirling Swami  -    Object Oriented Design                   //
 /////////////////////////////////////////////////////////////////////

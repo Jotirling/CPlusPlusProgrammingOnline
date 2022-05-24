@@ -25,7 +25,7 @@
 //         The worst-case time complexity of bubble sort is O(n2).
 
 //      Case	        Time Complexity
-//
+
 //      Best Case	    O(n)
 //      Average Case	O(n2)
 //      Worst Case	    O(n2)
@@ -48,15 +48,6 @@
 //      It will be helpful, as suppose after an iteration, if there is no swapping required, the value of variable swapped will be false.
 //      It means that the elements are already sorted, and no further iterations are required.
 //      This method will reduce the execution time and also optimizes the bubble sort.
-
-
-
-
-
-
-
-
-
 
 #include <iostream>
 using namespace std;
@@ -117,6 +108,8 @@ void bubbleSortOptimised(int array[], int size)
             break;
     }
 }
+
+
 
 int main()
 {

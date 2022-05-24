@@ -85,6 +85,10 @@ public:
 
 class ConcreteObserver : public Observer
 {
+private:
+    std::string Obsrver_Name;
+    ConcreteSubject *subject_;
+
 public:
     ConcreteObserver(ConcreteSubject *ConcreteSubject, std::string ObsrverName) : subject_(ConcreteSubject)
     {
@@ -106,10 +110,6 @@ public:
         std::cout << "Observer is removed: " << Obsrver_Name << std::endl;
         subject_->Detach(this);
     }
-
-private:
-    std::string Obsrver_Name;
-    ConcreteSubject *subject_;
 };
 
 void ClientCode()

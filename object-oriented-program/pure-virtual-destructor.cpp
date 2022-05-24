@@ -17,8 +17,7 @@
 //
 //		1. A pure virtual destructor can be declared. After the destructor has been created as a pure virtual object,
 //		2. the destructor body must be provided.
-//		3. This is due to the fact that destructors will not be overridden in derived classes,
-//				but will instead be called in reverse order.
+//		3. This is due to the fact that destructors will not be overridden in derived classes, but will instead be called in reverse order.
 //		4. As a result, for a pure virtual destructor, you must specify a destructor body.
 //
 //	Can a destructor be pure virtual in C++?
@@ -93,7 +92,7 @@ int main() {
 //
 //	Note :
 //		It is important to note that a class becomes an abstract class when it contains a pure virtual destructor.
-//		We can create pointer to Test class but we can create any object of the class.
+//		We can create pointer to Test class but we can not create any object of the class.
 
 #include <iostream>
 #ifndef NULL

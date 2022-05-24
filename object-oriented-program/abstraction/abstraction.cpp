@@ -75,8 +75,9 @@ int main()
     return 0;
 }
 
-//     Advantages of Data Abstraction:
-//         Helps the user to avoid writing the low level code.
-//         Avoids code duplication and increases reusability.
-//         Can change internal implementation of class independently without affecting the user.
-//         Helps to increase security of an application or program as only important details are provided to the user.
+// Advantages of Data Abstraction:
+//     Helps the user to avoid writing the low level code.
+//     Avoids code duplication and increases reusability.
+//     Can change internal implementation, independently without affecting the user.
+//     Helps to increase security of an application or program as only 
+//     important details are provided to the user.
