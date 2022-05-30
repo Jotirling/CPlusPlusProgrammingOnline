@@ -26,8 +26,8 @@
 
 //         class D
 //         {
-//                 private:
-//                     B b;
+//             private:
+//                 B b;
 //         };
 
 //         Explanation:
@@ -78,5 +78,63 @@
 //             };
 
 //         Explanation:
-//             A class U uses instance of class R, to which it holds a reference. R is created by some other entity
+//             A class U uses instance of class R, to which it holds a reference.
+//             R is created by some other entity
 //             and a reference to it is passed to some member function of class U.
+
+// Relationships between objects
+
+// There are many different kinds of relationships two objects may have in real-life, and we use specific “relation type” words to describe these relationships.
+// For example:
+//     a square “is-a” shape.
+//     A car “has-a” steering wheel.
+//     A computer programmer “uses-a” keyboard.
+//     A flower “depends-on” a bee for pollination.
+//     A student is a “member-of” a class.
+//     Your brain exists as “part-of” you
+
+// ASSOCIATION — By Value 
+//      I have a relationship with an object.
+//      Foo uses Bar
+//      It dose not tell about the life cycle of the Bar
+
+class Bar
+{
+};
+class F00
+{
+    void Baz(Bar bar)
+    {
+    }
+};
+
+//  Aggregation — By Reference
+//      I have an object which I've borrowed from someone else.
+//      When Foo dies, Bar may live on.
+
+class Bar
+{
+};
+
+class Foo
+{
+    Bar _bar;
+    Foo(const Bar &bar)
+    {
+        _bar = bar;
+    }
+
+} :
+
+// Composition — if 1 composite of 2 Means if 1 dies  then 2 dies also
+//      I own an object and I am responsible for its lifetime.
+//      When Foo dies, so does Bar
+
+class Bar
+{
+};
+class Foo
+{
+private:
+    Bar *bar = new Bar();
+};
