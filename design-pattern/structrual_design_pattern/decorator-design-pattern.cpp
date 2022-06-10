@@ -32,7 +32,7 @@ public:
 class CarDecorator : public ICar
 {
 protected:
-    ICar *icar; // composition 
+    ICar *icar; // composition
     CarDecorator(ICar *icar_) : icar(icar_)
     {
     }
@@ -90,6 +90,7 @@ int main()
     sedanCar = new SunRoofCarDecorator(sedanCar);
     cout << "sedanCarAlloyWheelsCarDecorator + LeatherWorkCarDecorator + SunRoofCarDecorator: " << sedanCar->getPrice() << endl;
     cout << endl;
+
     ICar *SUVCar = new SUV;
     SUVCar = new AlloyWheelsCarDecorator(SUVCar);
     cout << "SUVCar AlloyWheelsCarDecorator: " << SUVCar->getPrice() << endl;
