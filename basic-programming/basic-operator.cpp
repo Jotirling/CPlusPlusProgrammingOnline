@@ -425,3 +425,64 @@ int main()
 //     7. The sizeof operator returns the size of a variable or data type.
 //     8. The comma operator executes a sequence of operations.
 //     9. The conditional operator evaluates a condition and acts based on the outcome.
+
+/*
+Note - Example with details
+    1. Pre - Increment/Decrement
+    2. Post - Increment/Decrement
+
+*/
+
+int main()
+{
+
+    unsigned int value1 = 10;
+    unsigned int value2;
+
+    cout << "value1 is now: " << value1 << endl;
+    cout << "value2 = ++value1" << endl;
+    // Pre - Increment
+    value2 = ++value1;
+    // the above line will break into the below line in complilation
+
+    // value2 = value1 = value1 + 1
+
+    cout << "Pre - Increment value1: " << value1 << endl;
+    cout << "Pre - Increment value2: " << value2 << endl;
+
+    // Pre - Decrement
+    cout << "value2 = --value1" << endl;
+
+    value2 = --value1;
+    // the above line will break into the below line in complilation
+    // value2 = value1 = value1 - 1
+
+    cout << "Pre - Decrement value1: " << value1 << endl;
+    cout << "Pre - Decrement value2: " << value2 << endl;
+
+    cout << "value1 is now: " << value1 << endl;
+
+    // Post - Increment
+    cout << "value2 = value1++" << endl;
+
+    value2 = value1++;
+    // the above line will break into the below line in complilation
+    // value2 = value1
+    // value1 = value1 + 1
+
+    cout << "Post - Increment value1: " << value1 << endl;
+    cout << "Post - Increment value2: " << value2 << endl;
+
+    // Post - Decrement
+    cout << "value2 = value1--" << endl;
+
+    value2 = value1--;
+    // the above line will break into the below line in complilation
+    // value2 = value1
+    //  value1 = value1 - 1
+
+    cout << "Post - Decrement value1: " << value1 << endl;
+    cout << "Post - Decrement value2: " << value2 << endl;
+
+    return 0;
+}
