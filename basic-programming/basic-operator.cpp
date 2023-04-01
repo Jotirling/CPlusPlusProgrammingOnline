@@ -1,7 +1,7 @@
 // Operators in C++
 
 //     What are Operators
-//     An operator is a symbol used for performing operations on operands. 
+//     An operator is a symbol used for performing operations on operands.
 //     An operator operates operands.
 //     The operations can be mathematical or logical.
 //     There are different types of operators in C++ for performing different operations.
@@ -200,6 +200,26 @@ int Bitwise_Operators()
 
     z = p >> 2;
     cout << "p>>2 is : " << z << endl; //    15 = 0000 1111
+
+    unsigned int val = 60; //    60 = 0011 1100
+
+    // if you right shift by one time value will get double
+    // if value = 60 and you performed once right shit the final value = 120
+    cout << (val << 1) << endl; //=> 120
+
+    // if you right shift by two times valye will get double double
+    // if value = 60 and you performed double Left shit the final value = 240
+    cout << (val << 2) << endl; //=> 240
+
+    cout << val << endl; //=> 60
+
+    // if you Left shift by one time value will get divided by 2
+    // if value = 60 and you performed once Left shit the final value = 5
+    cout << (val >> 1) << endl; //=> 5
+
+    // if you Left shift by two times valye will get double double
+    // if value = 60 and you performed double Left shit the final value = 1
+    cout << (val >> 2) << endl; //=> 1
 
     return 0;
 }
