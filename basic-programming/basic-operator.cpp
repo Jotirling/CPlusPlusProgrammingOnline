@@ -441,11 +441,12 @@ int main()
 
     cout << "value1 is now: " << value1 << endl;
     cout << "value2 = ++value1" << endl;
+
     // Pre - Increment
     value2 = ++value1;
-    // the above line will break into the below line in complilation
 
-    // value2 = value1 = value1 + 1
+    // the above line will break into only one below line in complilation
+    // statement - 1 =>  value2 = value1 = value1 + 1
 
     cout << "Pre - Increment value1: " << value1 << endl;
     cout << "Pre - Increment value2: " << value2 << endl;
@@ -454,8 +455,8 @@ int main()
     cout << "value2 = --value1" << endl;
 
     value2 = --value1;
-    // the above line will break into the below line in complilation
-    // value2 = value1 = value1 - 1
+    // the above line will break into only one below line in complilation
+    // statement - 1 =>  value2 = value1 = value1 - 1
 
     cout << "Pre - Decrement value1: " << value1 << endl;
     cout << "Pre - Decrement value2: " << value2 << endl;
@@ -466,9 +467,9 @@ int main()
     cout << "value2 = value1++" << endl;
 
     value2 = value1++;
-    // the above line will break into the below line in complilation
-    // value2 = value1
-    // value1 = value1 + 1
+    // the above line will break into the below two statement line in complilation
+    // statement - 1 =>  value2 = value1
+    // statement - 2 =>   value1 = value1 + 1
 
     cout << "Post - Increment value1: " << value1 << endl;
     cout << "Post - Increment value2: " << value2 << endl;
@@ -478,11 +479,31 @@ int main()
 
     value2 = value1--;
     // the above line will break into the below line in complilation
-    // value2 = value1
-    //  value1 = value1 - 1
+    // statement - 1 =>  value2 = value1
+    // statement - 2 =>  value1 = value1 - 1
 
     cout << "Post - Decrement value1: " << value1 << endl;
     cout << "Post - Decrement value2: " << value2 << endl;
 
     return 0;
 }
+
+/*
+Output of Above program:
+
+value1 is now: 10
+value2 = ++value1
+Pre - Increment value1: 11
+Pre - Increment value2: 11
+value2 = --value1
+Pre - Decrement value1: 10
+Pre - Decrement value2: 10
+value1 is now: 10
+value2 = value1++
+Post - Increment value1: 11
+Post - Increment value2: 10
+value2 = value1--
+Post - Decrement value1: 10
+Post - Decrement value2: 11
+
+*/
