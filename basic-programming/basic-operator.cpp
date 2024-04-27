@@ -400,31 +400,6 @@ int Operators_Associativity()
     return 0;
 }
 
-int main()
-{
-    Arithmetic_Operators();
-    Relational_Operators();
-    Logical_Operators();
-    Bitwise_Operators();
-    Assignment_Operators();
-    sizeof_Operator();
-    Comma_Operator();
-    Conditional_Operator();
-    Operators_Associativity();
-
-    return 0;
-}
-
-// Summary:
-//     1. Operators are symbols for performing logical and arithmetic operations.
-//     2. Arithmetic operators help us perform various arithmetic operations on operands.
-//     3. Relational operators help us perform various comparison operations on operands.
-//     4. Logical operators help us perform various logical operations on operands.
-//     5. Bitwise operators help us perform bitwise operations on operands.
-//     6. Assignment operators help us perform various arithmetic operations on operands.
-//     7. The sizeof operator returns the size of a variable or data type.
-//     8. The comma operator executes a sequence of operations.
-//     9. The conditional operator evaluates a condition and acts based on the outcome.
 
 /*
 Note - Example with details
@@ -433,7 +408,7 @@ Note - Example with details
 
 */
 
-int main()
+int mPre_Post_Increment_Decrement_Operatorain()
 {
 
     unsigned int value1 = 10;
@@ -507,3 +482,30 @@ Post - Decrement value1: 10
 Post - Decrement value2: 11
 
 */
+
+int main()
+{
+    Arithmetic_Operators();
+    Relational_Operators();
+    Logical_Operators();
+    Bitwise_Operators();
+    Assignment_Operators();
+    sizeof_Operator();
+    Comma_Operator();
+    Conditional_Operator();
+    Operators_Associativity();
+    Pre_Post_Increment_Decrement_Operator();
+
+    return 0;
+}
+
+// Summary:
+//     1. Operators are symbols for performing logical and arithmetic operations.
+//     2. Arithmetic operators help us perform various arithmetic operations on operands.
+//     3. Relational operators help us perform various comparison operations on operands.
+//     4. Logical operators help us perform various logical operations on operands.
+//     5. Bitwise operators help us perform bitwise operations on operands.
+//     6. Assignment operators help us perform various arithmetic operations on operands.
+//     7. The sizeof operator returns the size of a variable or data type.
+//     8. The comma operator executes a sequence of operations.
+//     9. The conditional operator evaluates a condition and acts based on the outcome.

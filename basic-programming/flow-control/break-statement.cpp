@@ -19,8 +19,8 @@ Before you learn about the break statement, make sure you know about:
 
 #include <iostream>
 using namespace std;
-#ifndef NULL
 
+// #ifndef NULL
 int main()
 {
     for (int i = 1; i <= 5; i++)
@@ -35,7 +35,7 @@ int main()
 
     return 0;
 }
-#endif
+// #endif
 
 /*
 Note:
@@ -87,7 +87,7 @@ int main()
 
 #include <iostream>
 using namespace std;
-
+#ifndef NULL
 int main()
 {
     int number;
@@ -111,3 +111,4 @@ int main()
 
     return 0;
 }
+#endif
