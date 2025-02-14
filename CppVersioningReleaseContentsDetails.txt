@@ -1,0 +1,439 @@
+
+
+#####################################################################################################################################
+
+
+C++ has evolved significantly since its inception. Here's a brief overview of its version history and key changes:
+
+### Early Development
+- **1979**: Bjarne Stroustrup began working on "C with Classes," which introduced classes, inheritance, and other features.
+- **1985**: The first official release of C++.
+
+### Standard Versions and Key Changes
+1. **C++98 (ISO/IEC 14882:1998)**
+   - **New Features**: Standard Template Library (STL), namespaces, exceptions, RTTI (Run-Time Type Information).
+   - **Deprecated**: `auto_ptr` (later deprecated in C++11).
+
+2. **C++03 (ISO/IEC 14882:2003)**
+   - **New Features**: Minor bug fixes and improvements over C++98.
+   - **Deprecated**: No major deprecations.
+
+3. **C++11 (ISO/IEC 14882:2011)**
+   - **New Features**: `auto` keyword, range-based for loops, lambda expressions, `nullptr`, `std::thread`, `std::unique_ptr`, `std::shared_ptr`.
+   - **Deprecated**: `std::auto_ptr`, `std::random_shuffle`.
+
+4. **C++14 (ISO/IEC 14882:2014)**
+   - **New Features**: Binary literals, generic lambdas, `std::make_unique`.
+   - **Deprecated**: `std::gets`.
+
+5. **C++17 (ISO/IEC 14882:2017)**
+   - **New Features**: `std::optional`, `std::variant`, `std::any`, `if constexpr`, structured bindings.
+   - **Deprecated**: `std::random_shuffle`, `std::allocator<void>`.
+
+6. **C++20 (ISO/IEC 14882:2020)**
+   - **New Features**: Concepts, ranges, coroutines, modules, `std::format`, `std::span`.
+   - **Deprecated**: `std::iterator`, `std::allocator<void>`.
+
+7. **C++23 (ISO/IEC 14882:2024)**
+   - **New Features**: Reflection, pattern matching, `std::expected`, `std::flat_map`.
+   - **Deprecated**: No major deprecations reported yet.
+
+### Functions and Features
+- **Added**: Each version introduced new functions and features to enhance performance, usability, and safety.
+- **Deprecated**: Functions and features that were considered unsafe or obsolete were deprecated to encourage better practices.
+
+For a detailed list of changes and deprecated features, you can refer to the [cppreference](https://en.cppreference.com/w/cpp/language/history) and [Wikipedia](https://en.wikipedia.org/wiki/C++) pages[1](https://en.cppreference.com/w/cpp/language/history)[2](https://en.wikipedia.org/wiki/C++).
+
+#####################################################################################################################################
+
+C++98 (ISO/IEC 14882:1998)
+Added Features and Functions
+Standard Template Library (STL):
+
+Containers: std::vector, std::list, std::deque, std::set, std::map, std::multiset, std::multimap, std::stack, std::queue, std::priority_queue.
+Algorithms: std::sort, std::find, std::for_each, std::copy, std::transform, etc.
+Iterators: std::iterator, std::back_inserter, std::front_inserter, std::inserter.
+Namespaces:
+
+Introduced to avoid name collisions.
+Exceptions:
+
+Standardized exception handling with try, catch, and throw.
+Run-Time Type Information (RTTI):
+
+dynamic_cast, typeid.
+bool Type:
+
+Introduced bool as a built-in type.
+Mutable Keyword:
+
+Allows modification of member variables even if they are part of a const object.
+Template Enhancements:
+
+Template instantiation, member templates, export keyword.
+New Cast Operators:
+
+static_cast, dynamic_cast, const_cast, reinterpret_cast1.
+Deprecated APIs
+auto_ptr: Although it was introduced in C++98, it was later deprecated in C++11 due to its unsafe behavior in certain scenarios
+
+#####################################################################################################################################
+
+No problem! Let's cover the details for C++03.
+
+### C++03 (ISO/IEC 14882:2003)
+
+#### Added Features and Functions
+C++03 was primarily a bug-fix release that addressed various core language and library issues from C++98. It included the following notable changes:
+
+1. **Value Initialization**:
+   - Ensures that objects are initialized to zero or default values.
+
+2. **Library Defect Fixes**:
+   - Addressed 125 library defect reports, improving the reliability and usability of the Standard Library[1](https://en.wikipedia.org/wiki/C%2B%2B03).
+
+3. **Core Language Defect Fixes**:
+   - Addressed 92 core language defect reports, enhancing consistency and portability[1](https://en.wikipedia.org/wiki/C%2B%2B03).
+
+4. **Contiguous Storage for `std::vector`**:
+   - Codified the requirement that elements in a `std::vector` are stored contiguously, similar to an array[1](https://en.wikipedia.org/wiki/C%2B%2B03).
+
+5. **Koenig Lookup (Argument-Dependent Lookup)**:
+   - Improved the way functions are found during overload resolution[2](https://www.geeksforgeeks.org/cpp-03-standard/).
+
+6. **Explicit Template Instantiation**:
+   - Clarified rules for explicit instantiation of templates[2](https://www.geeksforgeeks.org/cpp-03-standard/).
+
+7. **Enhancements to Member Templates**:
+   - Improved support and functionality for member templates[2](https://www.geeksforgeeks.org/cpp-03-standard/).
+
+8. **Improvements to Exception Handling**:
+   - Enhanced the consistency and behavior of exception handling mechanisms[2](https://www.geeksforgeeks.org/cpp-03-standard/).
+
+#### Deprecated APIs
+C++03 did not introduce any new deprecations. The focus was on fixing defects and improving the existing features from C++98.
+
+Would you like to proceed to the next version, C++11, or is there anything specific you want to explore further in C++03?
+[1](https://en.wikipedia.org/wiki/C%2B%2B03): [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B03)
+[2](https://www.geeksforgeeks.org/cpp-03-standard/): [GeeksforGeeks](https://www.geeksforgeeks.org/cpp-03-standard/)
+
+#####################################################################################################################################
+
+### C++11 (ISO/IEC 14882:2011)
+
+#### Added Features and Functions
+1. **Core Language Features**:
+   - **`auto` keyword**: Automatic type deduction.
+   - **`decltype`**: Type deduction from an expression.
+   - **Lambda Expressions**: Inline anonymous functions.
+   - **Rvalue References and Move Semantics**: `std::move`, move constructors, and move assignment operators.
+   - **`nullptr`**: A type-safe null pointer.
+   - **Static Assertions**: `static_assert`.
+   - **Strongly-Typed Enums**: `enum class`.
+   - **Variadic Templates**: Templates that accept a variable number of arguments.
+   - **Uniform Initialization Syntax**: `{}` initialization.
+   - **Range-Based for Loops**: Simplified iteration over containers.
+   - **Explicit Conversion Operators**: `explicit` keyword for conversion operators.
+   - **New String Literals**: Raw string literals, Unicode string literals.
+   - **Attributes**: `[[noreturn]]`, `[[carries_dependency]]`.
+   - **constexpr**: Compile-time constant expressions.
+   - **Delegating Constructors**: Constructors calling other constructors.
+   - **In-Class Member Initializers**: Default member initializers.
+   - **Override and Final Specifiers**: `override`, `final`.
+   - **Thread Local Storage**: `thread_local` keyword.
+
+2. **Standard Library Features**:
+   - **Smart Pointers**: `std::unique_ptr`, `std::shared_ptr`, `std::weak_ptr`.
+   - **New Containers**: `std::array`, `std::forward_list`, `std::unordered_map`, `std::unordered_set`.
+   - **New Algorithms**: `std::all_of`, `std::any_of`, `std::none_of`, `std::find_if_not`, `std::copy_if`, `std::copy_n`, `std::move`, `std::move_backward`, `std::shuffle`, `std::is_partitioned`, `std::partition_copy`, `std::partition_point`.
+   - **Regular Expressions**: `std::regex`.
+   - **Tuples**: `std::tuple`.
+   - **Type Traits**: `std::is_same`, `std::is_integral`, etc.
+   - **Random Number Generation**: `std::random_device`, `std::mt19937`, `std::uniform_int_distribution`, etc.
+   - **Chrono Library**: `std::chrono::system_clock`, `std::chrono::steady_clock`, `std::chrono::duration`.
+   - **Thread Support Library**: `std::thread`, `std::mutex`, `std::lock_guard`, `std::unique_lock`, `std::condition_variable`, `std::future`, `std::promise`.
+   - **New Function Objects**: `std::bind`, `std::function`, `std::ref`.
+
+#### Deprecated APIs
+- **`std::auto_ptr`**: Deprecated due to unsafe behavior and replaced by `std::unique_ptr`[1](https://gcc.gnu.org/onlinedocs/libstdc++/manual/api.html).
+- **`std::random_shuffle`**: Deprecated in favor of `std::shuffle`[1](https://gcc.gnu.org/onlinedocs/libstdc++/manual/api.html).
+- **Dynamic Exception Specifications**: Deprecated in favor of `noexcept`[1](https://gcc.gnu.org/onlinedocs/libstdc++/manual/api.html).
+- **Old Function Adapters**: `std::bind1st`, `std::bind2nd`, `std::ptr_fun`, `std::mem_fun`, `std::mem_fun_ref`[1](https://gcc.gnu.org/onlinedocs/libstdc++/manual/api.html).
+
+These changes made C++11 a significant update, introducing many modern features that improved the language's usability, performance, and safety.
+
+#####################################################################################################################################
+
+Certainly! Here's a detailed overview of the features and functions added in C++11, along with the deprecated APIs from C++03:
+
+### C++11 (ISO/IEC 14882:2011)
+
+#### Added Features and Functions
+1. **Core Language Features**:
+   - **`auto` keyword**: Automatic type deduction.
+   - **`decltype`**: Type deduction from an expression.
+   - **Lambda Expressions**: Inline anonymous functions.
+   - **Rvalue References and Move Semantics**: `std::move`, move constructors, and move assignment operators.
+   - **`nullptr`**: A type-safe null pointer.
+   - **Static Assertions**: `static_assert`.
+   - **Strongly-Typed Enums**: `enum class`.
+   - **Variadic Templates**: Templates that accept a variable number of arguments.
+   - **Uniform Initialization Syntax**: `{}` initialization.
+   - **Range-Based for Loops**: Simplified iteration over containers.
+   - **Explicit Conversion Operators**: `explicit` keyword for conversion operators.
+   - **New String Literals**: Raw string literals, Unicode string literals.
+   - **Attributes**: `[[noreturn]]`, `[[carries_dependency]]`.
+   - **constexpr**: Compile-time constant expressions.
+   - **Delegating Constructors**: Constructors calling other constructors.
+   - **In-Class Member Initializers**: Default member initializers.
+   - **Override and Final Specifiers**: `override`, `final`.
+   - **Thread Local Storage**: `thread_local` keyword.
+
+2. **Standard Library Features**:
+   - **Smart Pointers**: `std::unique_ptr`, `std::shared_ptr`, `std::weak_ptr`.
+   - **New Containers**: `std::array`, `std::forward_list`, `std::unordered_map`, `std::unordered_set`.
+   - **New Algorithms**: `std::all_of`, `std::any_of`, `std::none_of`, `std::find_if_not`, `std::copy_if`, `std::copy_n`, `std::move`, `std::move_backward`, `std::shuffle`, `std::is_partitioned`, `std::partition_copy`, `std::partition_point`.
+   - **Regular Expressions**: `std::regex`.
+   - **Tuples**: `std::tuple`.
+   - **Type Traits**: `std::is_same`, `std::is_integral`, etc.
+   - **Random Number Generation**: `std::random_device`, `std::mt19937`, `std::uniform_int_distribution`, etc.
+   - **Chrono Library**: `std::chrono::system_clock`, `std::chrono::steady_clock`, `std::chrono::duration`.
+   - **Thread Support Library**: `std::thread`, `std::mutex`, `std::lock_guard`, `std::unique_lock`, `std::condition_variable`, `std::future`, `std::promise`.
+   - **New Function Objects**: `std::bind`, `std::function`, `std::ref`[1](https://blogs.embarcadero.com/a-complete-guide-to-the-list-of-features-in-c-11/)[2](https://en.cppreference.com/w/cpp/11).
+
+#### Deprecated APIs
+- **`std::auto_ptr`**: Deprecated due to unsafe behavior and replaced by `std::unique_ptr`[3](https://stackoverflow.com/questions/34678096/c11-and-generalized-initializers-conventions).
+- **`std::random_shuffle`**: Deprecated in favor of `std::shuffle`[4](https://www.implementingquantlib.com/2018/06/going-to-11-deprecated-features.html).
+- **Dynamic Exception Specifications**: Deprecated in favor of `noexcept`[3](https://stackoverflow.com/questions/34678096/c11-and-generalized-initializers-conventions).
+- **Old Function Adapters**: `std::bind1st`, `std::bind2nd`, `std::ptr_fun`, `std::mem_fun`, `std::mem_fun_ref`[3](https://stackoverflow.com/questions/34678096/c11-and-generalized-initializers-conventions).
+
+These changes made C++11 a significant update, introducing many modern features that improved the language's usability, performance, and safety.
+
+Would you like to proceed to the next version, C++14, or is there anything specific you want to explore further in C++11?
+[1](https://blogs.embarcadero.com/a-complete-guide-to-the-list-of-features-in-c-11/): [cppreference](https://en.cppreference.com/w/cpp/11)
+[2](https://en.cppreference.com/w/cpp/11): [Programiz](https://www.programiz.com/cpp-programming/cpp-11)
+[3](https://stackoverflow.com/questions/34678096/c11-and-generalized-initializers-conventions): SmartBear
+[4](https://www.implementingquantlib.com/2018/06/going-to-11-deprecated-features.html): Reddit
+
+#####################################################################################################################################
+Sure! Here's a detailed overview of the features and functions added in C++14, along with the deprecated APIs from C++11:
+
+### C++14 (ISO/IEC 14882:2014)
+
+#### Added Features and Functions
+1. **Core Language Features**:
+   - **Binary Literals**: Allows binary number representation using the `0b` or `0B` prefix.
+   - **Digit Separators**: Use single quotes (`'`) to separate digits in numeric literals for readability.
+   - **Generic Lambdas**: Lambda expressions can now have auto parameters, making them more flexible.
+   - **Return Type Deduction**: Functions can deduce their return type using `auto`.
+   - **Relaxed `constexpr` Restrictions**: More expressions are allowed in `constexpr` functions.
+   - **Variable Templates**: Templates that define variables.
+   - **Aggregate Member Initialization**: Allows brace-initialization of aggregates with default member initializers.
+   - **`decltype(auto)`**: Combines `decltype` and `auto` for type deduction.
+   - **Extended `constexpr`**: Allows more complex expressions in `constexpr` functions.
+
+2. **Standard Library Features**:
+   - **`std::make_unique`**: A utility function to create `std::unique_ptr` instances.
+   - **`std::exchange`**: Exchanges the value of an object with a new value.
+   - **`std::quoted`**: Allows quoting and unquoting of strings.
+   - **Shared Mutexes and Locking**: `std::shared_mutex`, `std::shared_lock`.
+   - **Tuple Addressing via Type**: Access tuple elements by type.
+   - **Heterogeneous Lookup in Associative Containers**: Allows lookup with different types in associative containers.
+   - **New `begin` and `end` Iterators**: `std::rbegin`, `std::rend`, `std::crbegin`, `std::crend`.
+   - **`std::integer_sequence`**: A utility for compile-time sequences of integers.
+   - **`std::is_final` Type Trait**: Checks if a class is marked as `final`.
+   - **New Overloads for Ranges**: Additional overloads for algorithms to work with ranges.
+
+#### Deprecated APIs
+- **`std::gets`**: Removed due to security issues[1](https://blogs.embarcadero.com/a-complete-guide-to-the-list-of-features-in-c-14/).
+
+These changes in C++14 were aimed at making the language more expressive and easier to use, while also improving performance and safety.
+
+Would you like to proceed to the next version, C++17, or is there anything specific you want to explore further in C++14?
+[1](https://blogs.embarcadero.com/a-complete-guide-to-the-list-of-features-in-c-14/): cppreference
+[2](https://en.wikipedia.org/wiki/C%2B%2B14): [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B14)
+
+#####################################################################################################################################
+
+Certainly! Here's a detailed overview of the features and functions added in C++17, along with the deprecated APIs from C++14:
+
+### C++17 (ISO/IEC 14882:2017)
+
+#### Added Features and Functions
+1. **Core Language Features**:
+   - **Structured Bindings**: Allows unpacking of tuples and other types.
+   - **If and Switch with Initializers**: Allows initialization within `if` and `switch` statements.
+   - **Inline Variables**: Allows variables to be defined inline.
+   - **Fold Expressions**: Simplifies variadic template code.
+   - **constexpr Lambda Expressions**: Lambdas can now be `constexpr`.
+   - **Template Argument Deduction for Class Templates**: Simplifies template usage.
+   - **New Attributes**: `[[fallthrough]]`, `[[nodiscard]]`, `[[maybe_unused]]`.
+   - **Hexadecimal Floating-Point Literals**: Allows hexadecimal representation of floating-point numbers.
+   - **Guaranteed Copy Elision**: Ensures copy elision in certain scenarios.
+   - **u8 Character Literals**: Introduces UTF-8 character literals.
+   - **Nested Namespaces**: Simplifies namespace declarations.
+   - **__has_include Preprocessor Directive**: Checks for the presence of a header file.
+   - **constexpr if**: Conditional compilation based on constant expressions.
+
+2. **Standard Library Features**:
+   - **`std::optional`**: Represents optional values.
+   - **`std::variant`**: Type-safe union.
+   - **`std::any`**: Type-safe container for single values of any type.
+   - **`std::string_view`**: Non-owning view of a string.
+   - **`std::filesystem`**: Filesystem operations.
+   - **`std::apply`**: Invokes a callable object with a tuple of arguments.
+   - **`std::invoke`**: Generalized function invocation.
+   - **`std::byte`**: New type for byte manipulation.
+   - **Parallel Algorithms**: Parallel versions of standard algorithms.
+   - **`std::shared_mutex`**: Shared ownership mutex.
+   - **`std::scoped_lock`**: Locks multiple mutexes simultaneously.
+   - **`std::uncaught_exceptions`**: Returns the number of uncaught exceptions.
+   - **New Memory Management Functions**: `std::destroy`, `std::destroy_at`, `std::uninitialized_move`, `std::uninitialized_value_construct`.
+   - **New Utility Functions**: `std::as_const`, `std::not_fn`, `std::void_t`, `std::conjunction`, `std::disjunction`, `std::negation`.
+
+#### Deprecated APIs
+- **`std::auto_ptr`**: Removed due to unsafe behavior[1](https://devblogs.microsoft.com/cppblog/c17-feature-removals-and-deprecations/).
+- **`std::random_shuffle`**: Removed in favor of `std::shuffle`[1](https://devblogs.microsoft.com/cppblog/c17-feature-removals-and-deprecations/).
+- **Old Function Adapters**: `std::bind1st`, `std::bind2nd`, `std::ptr_fun`, `std::mem_fun`, `std::mem_fun_ref`[1](https://devblogs.microsoft.com/cppblog/c17-feature-removals-and-deprecations/).
+- **Dynamic Exception Specifications**: Removed in favor of `noexcept`[1](https://devblogs.microsoft.com/cppblog/c17-feature-removals-and-deprecations/).
+- **`std::iterator`**: Deprecated due to its complexity and replaced by simpler alternatives[2](https://learncplusplus.org/what-are-the-deprecated-c14-features-in-c17/).
+- **`std::raw_storage_iterator`**: Deprecated[2](https://learncplusplus.org/what-are-the-deprecated-c14-features-in-c17/).
+- **`std::get_temporary_buffer`**: Deprecated[2](https://learncplusplus.org/what-are-the-deprecated-c14-features-in-c17/).
+- **`std::is_literal_type`**: Deprecated[2](https://learncplusplus.org/what-are-the-deprecated-c14-features-in-c17/).
+- **`std::result_of`**: Deprecated in favor of `std::invoke_result`[2](https://learncplusplus.org/what-are-the-deprecated-c14-features-in-c17/).
+- **`<codecvt>` Header**: Deprecated due to complexity and replaced by dedicated text-processing libraries[2](https://learncplusplus.org/what-are-the-deprecated-c14-features-in-c17/).
+- **`std::shared_ptr::unique`**: Deprecated due to misleading behavior[2](https://learncplusplus.org/what-are-the-deprecated-c14-features-in-c17/).
+
+These changes in C++17 introduced many new features to enhance the language's expressiveness, performance, and safety, while also deprecating older, less safe, or less efficient features.
+
+Would you like to proceed to the next version, C++20, or is there anything specific you want to explore further in C++17?
+[2](https://learncplusplus.org/what-are-the-deprecated-c14-features-in-c17/): [Learn C++](https://learncplusplus.org/what-are-the-deprecated-c14-features-in-c17/)
+[1](https://devblogs.microsoft.com/cppblog/c17-feature-removals-and-deprecations/): [cppreference](https://en.cppreference.com/w/cpp/17)
+
+#####################################################################################################################################
+
+Certainly! Here's a detailed overview of the features and functions added in C++20, along with the deprecated APIs from C++17:
+
+### C++20 (ISO/IEC 14882:2020)
+
+#### Added Features and Functions
+1. **Core Language Features**:
+   - **Concepts**: Constraints on template parameters.
+   - **Ranges**: A new library for working with ranges of elements.
+   - **Coroutines**: Support for asynchronous programming.
+   - **Modules**: A new way to organize and modularize code.
+   - **Three-Way Comparison Operator (`<=>`)**: Also known as the spaceship operator.
+   - **Constexpr Improvements**: Expanded support for `constexpr` functions.
+   - **Constinit**: Ensures constant initialization.
+   - **Designated Initializers**: Allows specific initialization of struct members.
+   - **New Attributes**: `[[likely]]`, `[[unlikely]]`, `[[no_unique_address]]`.
+   - **Expanded `constexpr`**: More expressions and standard library functions can be `constexpr`.
+   - **Immediate Functions**: Marked with `consteval`.
+   - **New Keywords**: `char8_t` for UTF-8 characters.
+   - **Lambda Capture of `this` by Value**: Allows capturing `this` by value in lambdas.
+   - **Template Syntax Enhancements**: Abbreviated function templates.
+   - **Pack Expansions in Lambda Init-Captures**: Allows pack expansions in lambda captures.
+   - **Aggregate Initialization with Parentheses**: Allows aggregate initialization using parentheses.
+
+2. **Standard Library Features**:
+   - **New Headers**: `<bit>`, `<compare>`, `<concepts>`, `<coroutine>`, `<format>`, `<numbers>`, `<ranges>`, `<source_location>`, `<span>`, `<syncstream>`, `<version>`.
+   - **Formatting Library**: `std::format` for safe and efficient text formatting.
+   - **Calendar and Time Zone Library**: Extensions to `<chrono>`.
+   - **`std::span`**: A view over a contiguous sequence of objects.
+   - **`std::source_location`**: Captures source code location information.
+   - **`std::jthread`**: Joining thread.
+   - **Synchronization Primitives**: `std::barrier`, `std::latch`, `std::semaphore`.
+   - **Text Encodings**: Support for `char8_t`.
+   - **New Algorithms**: `std::shift_left`, `std::shift_right`, `std::starts_with`, `std::ends_with`.
+   - **New Utility Functions**: `std::bit_cast`, `std::to_address`, `std::remove_cvref`.
+   - **New Math Functions**: `std::midpoint`, `std::lerp`.
+   - **New Container Functions**: `std::erase`, `std::erase_if`.
+   - **New Type Traits**: `std::is_bounded_array`, `std::is_unbounded_array`.
+   - **Parallel Algorithms**: Execution policies for parallel and vectorized execution.
+   - **Atomic Smart Pointers**: Atomic operations for `std::shared_ptr`.
+
+#### Deprecated APIs
+- **`std::auto_ptr`**: Removed due to unsafe behavior[1](https://en.wikipedia.org/wiki/C%2B%2B20).
+- **`std::random_shuffle`**: Removed in favor of `std::shuffle`[1](https://en.wikipedia.org/wiki/C%2B%2B20).
+- **Old Function Adapters**: `std::bind1st`, `std::bind2nd`, `std::ptr_fun`, `std::mem_fun`, `std::mem_fun_ref`[1](https://en.wikipedia.org/wiki/C%2B%2B20).
+- **Dynamic Exception Specifications**: Removed in favor of `noexcept`[1](https://en.wikipedia.org/wiki/C%2B%2B20).
+- **`std::iterator`**: Deprecated due to its complexity and replaced by simpler alternatives[2](https://en.cppreference.com/w/cpp/20).
+- **`std::raw_storage_iterator`**: Deprecated[2](https://en.cppreference.com/w/cpp/20).
+- **`std::get_temporary_buffer`**: Deprecated[2](https://en.cppreference.com/w/cpp/20).
+- **`std::is_literal_type`**: Deprecated[2](https://en.cppreference.com/w/cpp/20).
+- **`std::result_of`**: Deprecated in favor of `std::invoke_result`[2](https://en.cppreference.com/w/cpp/20).
+- **`<codecvt>` Header**: Deprecated due to complexity and replaced by dedicated text-processing libraries[2](https://en.cppreference.com/w/cpp/20).
+- **`std::shared_ptr::unique`**: Deprecated due to misleading behavior[2](https://en.cppreference.com/w/cpp/20).
+
+These changes in C++20 introduced many new features to enhance the language's expressiveness, performance, and safety, while also deprecating older, less safe, or less efficient features.
+
+Would you like to proceed to the next version, C++23, or is there anything specific you want to explore further in C++20?
+[2](https://en.cppreference.com/w/cpp/20): Learn C++
+[1](https://en.wikipedia.org/wiki/C%2B%2B20): [cppreference](https://en.cppreference.com/w/cpp/20)
+
+#####################################################################################################################################
+
+Certainly! Here's a detailed overview of the features and functions added in C++23, along with the deprecated APIs from C++20:
+
+### C++23 (ISO/IEC 14882:2024)
+
+#### Added Features and Functions
+1. **Core Language Features**:
+   - **Explicit Object Parameter**: Allows specifying the object parameter explicitly in member functions.
+   - **Multidimensional Subscript Operator**: Supports multidimensional indexing (e.g., `v[1, 3, 7]`).
+   - **Static Call and Subscript Operators**: Static versions of call and subscript operators.
+   - **Static Lambdas**: Lambdas that can be marked as `static`.
+   - **Simplified Implicit Move**: Simplifies the rules for implicit move operations.
+   - **`auto(x)` and `auto{x}`**: Decay-copy in the language.
+   - **New Preprocessor Directives**: `#elifdef`, `#elifndef`, and `#warning`.
+   - **Extended Lifetime of Temporaries**: Extends the lifetime of temporaries in range-based for loop initializers.
+   - **New Standard Attribute**: `[[assume(expression)]]`.
+   - **Class Template Argument Deduction from Inherited Constructors**: Simplifies template argument deduction.
+   - **Labels at the End of Compound Statements**: Allows labels at the end of compound statements.
+   - **Alias Declarations in Init-Statements**: Allows alias declarations in initialization statements.
+   - **Literal Suffixes for `std::size_t`**: Introduces literal suffixes for `std::size_t` and the corresponding signed type.
+   - **Extended Floating-Point Types**: Adds support for extended floating-point types and literals.
+   - **Optional Parentheses for Nullary Lambdas**: Makes parentheses optional for nullary lambda expressions.
+   - **Attributes on Lambda Expressions**: Allows attributes on lambda expressions.
+   - **`constexpr` Changes**: Allows non-literal variables, labels, and `goto` statements in `constexpr` functions.
+   - **Support for UTF-8 as a Portable Source File Encoding**: Ensures UTF-8 support for source files.
+   - **Named Universal Character Escapes**: Introduces named universal character escapes (e.g., `\N{CAT FACE}`).
+   - **Delimited Escape Sequences**: Adds delimited escape sequences (e.g., `\o{7777}`, `\x{C0DE}`).
+
+2. **Standard Library Features**:
+   - **Standard Library Modules**: Introduces standard library modules `std` and `std.compat`.
+   - **Coroutine Library**: Adds support for synchronous coroutines with `std::generator`.
+   - **New Headers**: 
+     - `<expected>`: For handling expected values and errors.
+     - `<flat_map>` and `<flat_set>`: For flat associative containers.
+     - `<generator>`: For generator support.
+     - `<mdspan>`: For multi-dimensional span support.
+     - `<print>`: For improved printing capabilities.
+     - `<spanstream>`: For stream support with fixed-size buffers.
+     - `<stacktrace>`: For stack trace support.
+     - `<stdfloat>`: For extended floating-point types[1](https://en.cppreference.com/w/cpp/23)[2](https://en.wikipedia.org/wiki/C%2B%2B23)[3](https://www.geeksforgeeks.org/cpp-23-standard/).
+
+#### Deprecated APIs
+- **`std::auto_ptr`**: Removed due to unsafe behavior[4](https://libcxx.llvm.org/Status/Cxx23.html).
+- **`std::random_shuffle`**: Removed in favor of `std::shuffle`[4](https://libcxx.llvm.org/Status/Cxx23.html).
+- **Old Function Adapters**: `std::bind1st`, `std::bind2nd`, `std::ptr_fun`, `std::mem_fun`, `std::mem_fun_ref`[4](https://libcxx.llvm.org/Status/Cxx23.html).
+- **Dynamic Exception Specifications**: Removed in favor of `noexcept`[4](https://libcxx.llvm.org/Status/Cxx23.html).
+- **`std::iterator`**: Deprecated due to its complexity and replaced by simpler alternatives[5](https://dev.to/sbalasa/top-c23-features-4ibj).
+- **`std::raw_storage_iterator`**: Deprecated[5](https://dev.to/sbalasa/top-c23-features-4ibj).
+- **`std::get_temporary_buffer`**: Deprecated[5](https://dev.to/sbalasa/top-c23-features-4ibj).
+- **`std::is_literal_type`**: Deprecated[5](https://dev.to/sbalasa/top-c23-features-4ibj).
+- **`std::result_of`**: Deprecated in favor of `std::invoke_result`[5](https://dev.to/sbalasa/top-c23-features-4ibj).
+- **`<codecvt>` Header**: Deprecated due to complexity and replaced by dedicated text-processing libraries[5](https://dev.to/sbalasa/top-c23-features-4ibj).
+- **`std::shared_ptr::unique`**: Deprecated due to misleading behavior[5](https://dev.to/sbalasa/top-c23-features-4ibj).
+
+These changes in C++23 introduced many new features to enhance the language's expressiveness, performance, and safety, while also deprecating older, less safe, or less efficient features.
+
+Would you like to proceed to the next version, C++26, or is there anything specific you want to explore further in C++23?
+[1](https://en.cppreference.com/w/cpp/23): [cppreference](https://en.cppreference.com/w/cpp/23)
+[2](https://en.wikipedia.org/wiki/C%2B%2B23): [Wikipedia](https://en.wikipedia.org/wiki/C%2B%2B23)
+[3](https://www.geeksforgeeks.org/cpp-23-standard/): [GeeksforGeeks](https://www.geeksforgeeks.org/cpp-23-standard/)
+[5](https://dev.to/sbalasa/top-c23-features-4ibj): Learn C++
+[4](https://libcxx.llvm.org/Status/Cxx23.html): [cppreference](https://en.cppreference.com/w/cpp/23)
+
+#####################################################################################################################################
+
