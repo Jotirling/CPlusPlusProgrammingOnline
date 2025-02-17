@@ -120,3 +120,136 @@ int main()
 	cout << chunk << " ";
 }
 #endif
+
+//  3. What printf and scanf return
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int prinftRet = printf("%s", "Hello JotiPfiya!!!\n");
+	printf("prinftRet:%d", prinftRet);
+    printf("\n");
+
+ 	int intValue = 0;
+ 	char charValue[100];
+ 	int scanfRet = scanf("%s %d", &charValue, &intValue);
+ 	printf("scanfRet: %d", scanfRet);
+
+    return 0;
+}
+
+
+//  sizeof is function or array in c
+
+// POINTS:
+// 1. Its as an Operator not a function
+// 2. This is evaluated at compile time not run time
+// 3. It does not perform the operation given as an expression
+// 4. Parentheses are optional.
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int funcInt(){
+	printf("called funcInt");
+}
+double funcDouble(){
+	printf("called funcDouble");
+}
+
+int main(){
+    // at compile time it replaced with printf("%ld\n", 4); because of the return type
+    // "called funcInt" will not print on the console 
+    // Parentheses are optional
+	printf("%ld\n", sizeof funcInt() );	
+    // at compile time it replaced with printf("%ld\n", 8); because of the return type
+    // "called funcDouble" will not print on the console 
+    // Parentheses are optional
+	printf("%ld\n", sizeof(funcDouble()) );	// Parentheses are optional
+	
+	int value = 0;
+	printf("%ld\n", sizeof value );	// Parentheses are optional
+	return 0;
+}
+
+//  function pointer and function delecration
+
+#include <stdio.h>
+
+int funcInt(){
+	return 5;
+}
+
+int main(){
+	// int *fun (); // function declearation
+	int (*fun) (); // function pointer
+	
+	fun = funcInt; // if we use function declearation instead of function pointer will have compilation issue at this line
+	printf("%d\n", fun() );	// Parentheses are optional
+	return 0;
+}
+
+//Discussion on below points
+// const char * ptr OR char const * ptr
+// char * const ptr
+// const char * const ptr
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+int main() {
+    //------------------------------------------------------------
+    const char a = 'A';
+    const char b = 'B';
+    
+    // a = 'C'; // error: assignment of read-only variable 'a' 
+    
+    const char * ptrA = &a;    // Once its initiated we can change the Address where its pointing but we can not change the value of the pointer 
+    std::cout << *ptrA << std::endl; // A
+
+    ptrA = &b; 
+    std::cout << *ptrA << std::endl; // B
+    
+    // *ptrA = b; // error: assignment of read-only location '* ptrA'
+    
+    //------------------------------------------------------------
+    
+    char p = 'P';
+    
+    char* const ptrP = &p; // Once its initiated we can change the value of the pointer but not the Address where it's pointing to
+    std::cout << *ptrP << std::endl; // P
+    
+    *ptrP = 'Q';
+    std::cout << *ptrP << std::endl; // Q
+    
+    char q = 'Q';
+    char * ptrQ = &q;
+    
+    *ptrP = *ptrQ;
+    std::cout << *ptrP << std::endl; // Q
+
+    // ptrP = ptrQ;    // error: assignment of read-only variable 'ptrP'
+    // ptrP = &q;          // error: assignment of read-only variable 'ptrP'
+    
+    //------------------------------------------------------------
+    
+    const char x = 'X';
+    
+    const char* const ptrX = &x; // once its initiated then we can not change the value of the ptr OR Address of the ptr where it's pointing to
+    
+    std::cout << *ptrX << std::endl; // P
+    
+    const char y = 'Y';
+    const char * ptrY = &y;
+    
+    // ptrX = ptrY;    // error: assignment of read-only variable 'ptrX'
+    // ptrX = &y;      // error: assignment of read-only variable 'ptrX'
+    // *ptrX = y; // error: assignment of read-only location '*(const char*)ptrX'
+
+    //------------------------------------------------------------
+    return 0;
+}
+
+
+
